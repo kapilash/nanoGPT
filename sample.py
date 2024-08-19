@@ -5,7 +5,6 @@ import os
 import pickle
 from contextlib import nullcontext
 import torch
-import tiktoken
 import brahmi_lipi
 from model import GPTConfig, GPT
 
@@ -70,8 +69,8 @@ if load_meta:
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = tiktoken.get_encoding("gpt2")
-    encode = lambda s: enc.encode(s, allowed_special={"<|endoftext|>"})
+    enc = brahmi_lisp.TeluguTokenizer("smf.json")
+    encode = lambda s: enc.encode(s)
     decode = lambda l: enc.decode(l)
 
 # encode the beginning of the prompt
