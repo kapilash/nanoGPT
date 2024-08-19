@@ -6,6 +6,7 @@ import pickle
 from contextlib import nullcontext
 import torch
 import tiktoken
+import brahmi_lipi
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
@@ -63,9 +64,9 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    stoi, itos = meta['stoi'], meta['itos']
-    encode = lambda s: [stoi[c] for c in s]
-    decode = lambda l: ''.join([itos[i] for i in l])
+    tokenizer = brahmi_lipi.TeluguTokenizer("smf.json")
+    encode = lambda s: tokenizer.encode(s)
+    decode = lambda l: tokenizer.decode(l)
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
