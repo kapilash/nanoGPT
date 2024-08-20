@@ -63,13 +63,15 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer = tiktoken.get_encoding("gpt2")
+    tokenizer = tiktoken.get_encoding("cl100k_base")
+    #tokenizer = tiktoken.get_encoding("gpt2")
     encode = lambda s: tokenizer.encode(s)
     decode = lambda l: tokenizer.decode(l)
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = tiktoken.get_encoding("gpt2")
+    enc = tiktoken.get_encoding("cl100k_base")
+    #enc = tiktoken.get_encoding("gpt2")
     encode = lambda s: enc.encode(s)
     decode = lambda l: enc.decode(l)
 

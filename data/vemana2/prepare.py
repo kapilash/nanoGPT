@@ -20,8 +20,8 @@ def encode_text(tokenizer, file_path):
 if __name__ == "__main__":
     args = sys.argv[1:]
     training_file = args[0]
-    #tokenizer = tiktoken.get_encoding("cl100k_base")
-    tokenizer = tiktoken.get_encoding("gpt2")
+    tokenizer = tiktoken.get_encoding("cl100k_base")
+    #tokenizer = tiktoken.get_encoding("gpt2")
     train_tensor = encode_text(tokenizer, training_file)
     train_ids = train_tensor.numpy(force=True)
     train_ids.tofile(os.path.join(os.path.dirname(__file__), "train.bin"))
