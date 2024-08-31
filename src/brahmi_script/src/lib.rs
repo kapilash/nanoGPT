@@ -74,6 +74,20 @@ impl Syllable {
     }
 }
 
+impl fmt::Display for Syllable {
+    fn fmt(&self, f:&mut fmt::Formatter<'_>) -> fmt::Result {
+        match *self {
+            Syllable::Mono(c) => write!(f, "Mono(U{:x}, {})", c, std::char::from_u32(c).unwrap()),
+            Syllable::Di(c1, c2) => write!(f, "Di(U{:x}, U{:x}, {}{})", c1, c2, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap()),
+            Syllable::Cvv(c1, c2, c3) => write!(f, "Cvv(U{:x}, U{:x}, U{:x}, {}{}{})", c1, c2, c3, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap()),
+            Syllable::Cvc(c1, c2, c3) => write!(f, "Cvc(U{:x}, U{:x}, U{:x}, {}{}{})", c1, c2, c3, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap()),
+            Syllable::Cc(c1, c2) => write!(f, "Cc(U{:x}, U{:x}, {}{})", c1, c2, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap()),
+            Syllable::Cvvc(c1, c2, c3, c4) => write!(f, "Cvvc(U{:x}, U{:x}, U{:x}, U{:x}, {}{}{}{})", c1, c2, c3, c4, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap(), std::char::from_u32(c4).unwrap()),
+            Syllable::Meta(c) => write!(f, "Meta(U{:x}, {})", c, std::char::from_u32(c).unwrap()),
+        }
+    }
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 struct SyllableMapping {
     syllable_token : HashMap<Syllable, u32>,
@@ -122,6 +136,22 @@ enum SymbolInfo {
     Digit(u32),
     EndMarker(u32),
     OutOfRange(u32),
+}
+
+impl SymbolInfo {
+    fn get_u32(&self) -> u32 {
+        match *self {
+            SymbolInfo::VowelSuffix(i) => i,
+            SymbolInfo::VowelSign(i)   => i,
+            SymbolInfo::Vowel(i)       => i,
+            SymbolInfo::Consonant(i)   => i,
+            SymbolInfo::Virama(i)      => i,
+            SymbolInfo::Ignored(i)     => i,
+            SymbolInfo::Digit(i)       => i,
+            SymbolInfo::EndMarker(i)   => i,
+            SymbolInfo::OutOfRange(i)  => i
+        }
+    }
 }
 
 impl fmt::Display for SymbolInfo {
@@ -247,8 +277,13 @@ impl Config {
                 }
             }
         }
-        if self.is_digit(c) {
-            return SymbolInfo::Digit(c);
+
+        let mut ascii_digit = 48;
+        for i in self.digits.iter() {
+            if c == *i {
+                return SymbolInfo::Digit(ascii_digit);
+            }
+            ascii_digit += 1;
         }
         for eot in self.end_of_text.iter() {
             if c == *eot {
@@ -256,6 +291,10 @@ impl Config {
             }
         }
         SymbolInfo::OutOfRange(c)
+    }
+
+    fn virama(&self) -> u32 {
+        self.virama
     }
 
     fn is_virama(&self, c:u32) -> bool {
@@ -351,191 +390,127 @@ struct Converter {
 }
 
 impl Converter {
+
     pub fn new() -> Converter {
         Converter { stack: Vec::new(), syllables: Vec::new() }
     }
 
-    pub fn add_code_point(&mut self, symbol:&SymbolInfo, config:&Config) -> Result<(), &str> {
+    fn clear_stack(&mut self, virama:u32) {
         if self.stack.is_empty() {
-            // The followin rules apply here:
-            // the symbol can only be a consonant, vowel, digit, out of range or end of text.
-            match *symbol {
-                SymbolInfo::Vowel(_) | SymbolInfo::Consonant(_) | SymbolInfo::EndMarker(_) => {
-                    self.stack.push(*symbol);
-                },
-                SymbolInfo::OutOfRange(c) => {
-                    self.syllables.push(Syllable::Mono(c));
-                },
-                SymbolInfo::Digit(c) => {
-                    self.syllables.push(Syllable::Mono(config.to_ascii_digit(c)));
-                },
-                SymbolInfo::Ignored(_) => {
-                    // ignore
-                },
-                _ => {
-                    return Err("Invalid symbol found in the beginning of the text");
-                }
-            }
+            return;
         }
-        else {
-            let top = self.stack.last().unwrap();
-            match *top {
-                SymbolInfo::VowelSuffix(_) => {
-                    match *symbol {
-                        SymbolInfo::VowelSign(_) => {
-                            let vowel_sign = self.stack.pop().unwrap();
-                            let vowel_suffix = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Di(vowel_suffix, vowel_sign));
-                        },
-                        _ => {
-                            return Err("Invalid symbol found after a vowel suffix");
-                        }
-                    }
-                },
-                SymbolInfo::VowelSign(_) => {
-                    match *symbol {
-                        SymbolInfo::VowelSuffix(_) => {
-                            // ignore
-                        },
-                        SymbolInfo::Vowel(_) => {
-                            let vowel = self.stack.pop().unwrap();
-                            let vowel_sign = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Di(vowel_sign, vowel));
-                        },
-                        SymbolInfo::Consonant(_) => {
-                            let consonant = self.stack.pop().unwrap();
-                            let vowel_sign = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Di(vowel_sign, consonant));
-                        },
-                        _ => {
-                            return Err("Invalid symbol found after a vowel sign");
-                        }
-                    }
-                },
-                SymbolInfo::Vowel(_) => {
-                    match *symbol {
-                        SymbolInfo::VowelSuffix(_) => {
-                            let vowel = self.stack.pop().unwrap();
-                            let vowel_suffix = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Di(vowel, vowel_suffix));
-                        },
-                        SymbolInfo::VowelSign(_) => {
-                            let vowel = self.stack.pop().unwrap();
-                            let vowel_sign = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Di(vowel_sign, vowel));
-                        },
-                        SymbolInfo::Consonant(_) => {
-                            let vowel = self.stack.pop().unwrap();
-                            let consonant = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Di(vowel, consonant));
-                        },
-                        _ => {
-                            return Err("Invalid symbol found after a vowel");
-                        }
-                    }
-                },
-                SymbolInfo::Consonant(_) => {
-                    match *symbol {
-                        SymbolInfo::VowelSuffix(_) => {
-                            let consonant = self.stack.pop().unwrap();
-                            let vowel_suffix = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(consonant, vowel_suffix, 0));
-                        },
-                        SymbolInfo::VowelSign(_) => {
-                            let consonant = self.stack.pop().unwrap();
-                            let vowel_sign = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(consonant, vowel_sign, 0));
-                        },
-                        SymbolInfo::Vowel(_) => {
-                            let consonant = self.stack.pop().unwrap();
-                            let vowel = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(consonant, vowel, 0));
-                        },
-                        SymbolInfo::Consonant(_) => {
-                            let consonant2 = self.stack.pop().unwrap();
-                            let consonant1 = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cc(consonant1, consonant2));
-                        },
-                        _ => {
-                            return Err("Invalid symbol found after a consonant");
-                        }
-                    }
-                },
-                SymbolInfo::Virama(_) => {
-                    match *symbol {
-                        SymbolInfo::VowelSuffix(_) => {
-                            let virama = self.stack.pop().unwrap();
-                            let vowel_suffix = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(virama, vowel_suffix, 0));
-                        },
-                        SymbolInfo::VowelSign(_) => {
-                            let virama = self.stack.pop().unwrap();
-                            let vowel_sign = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(virama, vowel_sign, 0));
-                        },
-                        SymbolInfo::Vowel(_) => {
-                            let virama = self.stack.pop().unwrap();
-                            let vowel = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(virama, vowel, 0));
-                        },
-                        SymbolInfo::Consonant(_) => {
-                            let virama = self.stack.pop().unwrap();
-                            let consonant = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(virama, consonant, 0));
-                        },
-                        SymbolInfo::Virama(_) => {
-                            let virama2 = self.stack.pop().unwrap();
-                            let virama1 = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cc(virama1, virama2));
-                        },
-                        _ => {
-                            return Err("Invalid symbol found after a virama");
-                        }
-                    }
-                },
-                SymbolInfo::Ignored(_) => {
-                    // ignore
-                },
-                SymbolInfo::Digit(_) => {
-                    match *symbol {
-                        SymbolInfo::VowelSuffix(_) => {
-                            let digit = self.stack.pop().unwrap();
-                            let vowel_suffix = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(digit, vowel_suffix, 0));
-                        },
-                        SymbolInfo::VowelSign(_) => {
-                            let digit = self.stack.pop().unwrap();
-                            let vowel_sign = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(digit, vowel_sign, 0));
-                        },
-                        SymbolInfo::Vowel(_) => {
-                            let digit = self.stack.pop().unwrap();
-                            let vowel = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(digit, vowel, 0));
-                        },
-                        SymbolInfo::Consonant(_) => {
-                            let digit = self.stack.pop().unwrap();
-                            let consonant = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cvc(digit, consonant, 0));
-                        },
-                        SymbolInfo::Digit(_) => {
-                            let digit2 = self.stack.pop().unwrap();
-                            let digit1 = self.stack.pop().unwrap();
-                            self.syllables.push(Syllable::Cc(digit1, digit2));
-                        },
-                        _ => {
-                            return Err("Invalid symbol found after a digit");
-                        }
-                    }
-                },
-                SymbolInfo::OutOfRange(_) => {
-                    // ignore
-                }
-                SymbolInfo::EndMarker(_) => {
-                    // ignore
-                }
+        let top = self.stack.pop().unwrap().get_u32();
+        if self.stack.is_empty() {
+            self.syllables.push(Syllable::Mono(top));
+            return;
+        }
+        let second = self.stack.pop().unwrap().get_u32();
+        if self.stack.is_empty() {
+            self.syllables.push(Syllable::Di(second, top));
+            return;
+        }
+        let third = self.stack.pop().unwrap().get_u32();
+        if self.stack.is_empty() {
+            if second == virama {
+                self.syllables.push(Syllable::Cc(third, top));
             }
+            else {
+                 self.syllables.push(Syllable::Cvv(third, second, top));
+            }
+            return;
+        }
+        let fourth = self.stack.pop().unwrap().get_u32();
+        if self.stack.is_empty() {
+            if third == virama {
+                self.syllables.push(Syllable::Cvc(fourth, second, top));
+            }
+            else {
+                panic!("expected virama in second position: {} {} {} {} ", 
+                            std::char::from_u32(fourth).unwrap(),
+                            std::char::from_u32(third).unwrap(),
+                            std::char::from_u32(second).unwrap(),
+                            std::char::from_u32(top).unwrap());
+            }
+            return;
+        }
+        let fifth = self.stack.pop().unwrap().get_u32();
+        if fourth != virama {
+            panic!("expected virama in second position: {} {} {} {} {}", 
+                        std::char::from_u32(fifth).unwrap(),
+                        std::char::from_u32(fourth).unwrap(),
+                        std::char::from_u32(third).unwrap(),
+                        std::char::from_u32(second).unwrap(),
+                        std::char::from_u32(top).unwrap());
+        }
+        if !self.stack.is_empty() {
+            panic!("unexpected char sequence: {} {} {} {} {} (continues for {}) ", 
+                        std::char::from_u32(fifth).unwrap(),
+                        std::char::from_u32(fourth).unwrap(),
+                        std::char::from_u32(third).unwrap(),
+                        std::char::from_u32(second).unwrap(),
+                        std::char::from_u32(top).unwrap(),
+                        self.stack.len());
+        }
+       self.syllables.push(Syllable::Cvvc(fifth, third, second, top));
+    }
 
+    pub fn finish(&mut self, virama:u32) {
+        self.clear_stack(virama);
+    }
+
+    pub fn add_code_point(&mut self, symbol:&SymbolInfo, virama:u32) -> Result<(), String> {
+        if let SymbolInfo::Consonant(_) = symbol {
+            if self.stack.is_empty() {
+                self.stack.push(symbol.clone());
+                return Ok(());
+            }
+            if self.stack.last().unwrap().get_u32() == virama {
+                self.stack.push(symbol.clone());
+                return Ok(());
+            }
+            self.clear_stack(virama);
+            self.stack.push(*symbol);
+            return Ok(());
+        }
+        if let SymbolInfo::Vowel(_) = symbol {
+            self.clear_stack(virama);
+            self.stack.push(*symbol);
+        }
+        if let SymbolInfo::VowelSign(_) = symbol {
+            self.stack.push(*symbol);
+            return Ok(());
+        }
+        if let SymbolInfo::VowelSuffix(v) = symbol {
+            if self.stack.is_empty() {
+                return Err(format!("unexpected {}", std::char::from_u32(*v).unwrap()));
+            }
+            self.stack.push(*symbol);
+            return Ok(());
+        }
+        if let SymbolInfo::Virama(v) = symbol {
+            if self.stack.is_empty() {
+                return Err(format!("unexpected virama {}", std::char::from_u32(*v).unwrap()));
+            }
+            if self.stack.len() != 1 {
+                return Err(format!("unexpected virama {} when stack size is {}", std::char::from_u32(*v).unwrap(), self.stack.len()));
+            }
+            self.stack.push(*symbol);
+            return Ok(());
+        }
+        if let SymbolInfo::Digit(d) = symbol {
+            self.clear_stack(virama);
+            self.syllables.push(Syllable::Mono(*d));
+            return Ok(());
+        }
+        if let SymbolInfo::EndMarker(v) = symbol {
+            self.clear_stack(virama);
+            self.syllables.push(Syllable::Mono(*v));
+            return Ok(());
+        }
+        if let SymbolInfo::OutOfRange(r) = symbol {
+            self.clear_stack(virama);
+            self.syllables.push(Syllable::Mono(*r));
+            return Ok(());
         }
         Ok(())
     }
@@ -729,6 +704,202 @@ fn decode_contents(encoded:&[u32], syllabary:&SyllableMapping, config:&Config) -
     text
 }
 
+#[cfg(test)]
+mod telugu_tests{
+    use super::*;
+
+    #[test]
+    fn sthothramulu() {
+        let test_word = "స్తోత్రములు";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(4, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn puranalu() {
+        let test_word = "పురాణాలు";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(4, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn kavithvamu() {
+        let test_word = "కవిత్వము";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(4, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn paaschatyavidwamsulache() {
+        let test_word = "పాశ్చాత్యవిద్యాంసులచే";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(8, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn granthamu() {
+        let test_word = "గ్రంధము";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(3, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+}
+
+#[cfg(test)]
+mod hindi_tests{
+    use super::*;
+
+    #[test]
+    fn khaak() {
+        let test_word = "खाक़";
+        let config = Config::new_devnagari();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(2, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn koee() {
+        let test_word = "कोई";
+        let config = Config::new_devnagari();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+            println!("{}", s);
+        }
+        assert_eq!(2, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn fizaaon() {
+        let test_word = "फ़िज़ाओं";
+        let config = Config::new_devnagari();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(3, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn vyarth_gavaaye() {
+        let test_word = "व्यर्थ गवाये";
+        let config = Config::new_devnagari();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(6, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn jaanenadoongi() {
+        let test_word = "जाने न दूँगी";
+        let config = Config::new_devnagari();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        converter.finish(config.virama());
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(7, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+}
 #[pyclass]
 struct Tokenizer{
     syllabary : SyllableMapping,
