@@ -9,26 +9,16 @@ use serde::{Deserialize, Serialize};
 use pyo3::exceptions::PyValueError;
 use std::fmt;
 
-#[derive(Debug,Clone,Copy,PartialEq,Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug,Clone,PartialEq,Eq, Hash, Serialize, Deserialize)]
 enum Syllable {
-    /// Monophthong
     Mono(u32),
-
-    /// Diphthong (consonant + vowel symbol) or (vowel + vowel_suffix)
-    Di(u32, u32),
-
-    /// CVV (consonant + vowel + vowel)
-    Cvv(u32, u32, u32),
-    
-    /// Triphthong
-    Cvc(u32, u32, u32),
-
-    /// Consonant + Consonant + Double-Vowel,
-    Cvvc(u32, u32, u32, u32),
-
-    /// Double consonant
-    Cc(u32, u32),
-
+    Multi(Vec<u32>),
+    Double(u32, u32),
+    Triple(u32, u32, u32),
+    Quad(u32, u32, u32, u32),
+    Penta(u32, u32, u32, u32, u32),
+    Hexa(u32, u32, u32, u32, u32, u32),
+    Septa(u32, u32, u32, u32, u32, u32, u32),
     /// Meta character
     Meta(u32),
 }
@@ -40,32 +30,49 @@ impl Syllable {
             Syllable::Mono(c) => {
                 str.push(std::char::from_u32(c).unwrap());
             },
-            Syllable::Di(c1, c2) => {
+            Syllable::Double(c1, c2) => {
                 str.push(std::char::from_u32(c1).unwrap());
                 str.push(std::char::from_u32(c2).unwrap());
             },
-            Syllable::Cc(c1, c2) => {
-                str.push(std::char::from_u32(c1).unwrap());
-                str.push(std::char::from_u32(config.virama).unwrap());
-                str.push(std::char::from_u32(c2).unwrap());
-            },
-            Syllable::Cvc(c1, c2, c3) => {
-                str.push(std::char::from_u32(c1).unwrap());
-                str.push(std::char::from_u32(config.virama).unwrap());
-                str.push(std::char::from_u32(c2).unwrap());
-                str.push(std::char::from_u32(c3).unwrap());
-            },
-            Syllable::Cvv(c1, c2, c3) => {
+            Syllable::Triple(c1, c2, c3) => {
                 str.push(std::char::from_u32(c1).unwrap());
                 str.push(std::char::from_u32(c2).unwrap());
                 str.push(std::char::from_u32(c3).unwrap());
             },
-            Syllable::Cvvc(c1, c2, c3, c4) => {
+            Syllable::Quad(c1, c2, c3, c4) => {
                 str.push(std::char::from_u32(c1).unwrap());
-                str.push(std::char::from_u32(config.virama).unwrap());
                 str.push(std::char::from_u32(c2).unwrap());
                 str.push(std::char::from_u32(c3).unwrap());
                 str.push(std::char::from_u32(c4).unwrap());
+            },
+            Syllable::Penta(c1, c2, c3, c4, c5) => {
+                str.push(std::char::from_u32(c1).unwrap());
+                str.push(std::char::from_u32(c2).unwrap());
+                str.push(std::char::from_u32(c3).unwrap());
+                str.push(std::char::from_u32(c4).unwrap());
+                str.push(std::char::from_u32(c5).unwrap());
+            },
+            Syllable::Hexa(c1, c2, c3, c4, c5, c6) => {
+                str.push(std::char::from_u32(c1).unwrap());
+                str.push(std::char::from_u32(c2).unwrap());
+                str.push(std::char::from_u32(c3).unwrap());
+                str.push(std::char::from_u32(c4).unwrap());
+                str.push(std::char::from_u32(c5).unwrap());
+                str.push(std::char::from_u32(c6).unwrap());
+            },
+            Syllable::Multi(ref v) => {
+                for c in v.iter() {
+                    str.push(std::char::from_u32(*c).unwrap());
+                }
+            },
+            Syllable::Septa(c1, c2, c3, c4, c5, c6, c7) => {
+                str.push(std::char::from_u32(c1).unwrap());
+                str.push(std::char::from_u32(c2).unwrap());
+                str.push(std::char::from_u32(c3).unwrap());
+                str.push(std::char::from_u32(c4).unwrap());
+                str.push(std::char::from_u32(c5).unwrap());
+                str.push(std::char::from_u32(c6).unwrap());
+                str.push(std::char::from_u32(c7).unwrap());
             },
             Syllable::Meta(c) => {
                 str.push(std::char::from_u32(c).unwrap());
@@ -78,11 +85,19 @@ impl fmt::Display for Syllable {
     fn fmt(&self, f:&mut fmt::Formatter<'_>) -> fmt::Result {
         match *self {
             Syllable::Mono(c) => write!(f, "Mono(U{:x}, {})", c, std::char::from_u32(c).unwrap()),
-            Syllable::Di(c1, c2) => write!(f, "Di(U{:x}, U{:x}, {}{})", c1, c2, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap()),
-            Syllable::Cvv(c1, c2, c3) => write!(f, "Cvv(U{:x}, U{:x}, U{:x}, {}{}{})", c1, c2, c3, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap()),
-            Syllable::Cvc(c1, c2, c3) => write!(f, "Cvc(U{:x}, U{:x}, U{:x}, {}{}{})", c1, c2, c3, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap()),
-            Syllable::Cc(c1, c2) => write!(f, "Cc(U{:x}, U{:x}, {}{})", c1, c2, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap()),
-            Syllable::Cvvc(c1, c2, c3, c4) => write!(f, "Cvvc(U{:x}, U{:x}, U{:x}, U{:x}, {}{}{}{})", c1, c2, c3, c4, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap(), std::char::from_u32(c4).unwrap()),
+            Syllable::Double(c1, c2) => write!(f, "Double(U{:x}, U{:x}, {}{})", c1, c2, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap()),
+            Syllable::Triple(c1, c2, c3) => write!(f, "Triple(U{:x}, U{:x}, U{:x}, {}{}{})", c1, c2, c3, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap()),
+            Syllable::Quad(c1, c2, c3, c4) => write!(f, "Quad(U{:x}, U{:x}, U{:x}, U{:x}, {}{}{}{})", c1, c2, c3, c4, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap(), std::char::from_u32(c4).unwrap()),
+            Syllable::Penta(c1, c2, c3, c4,c5) => write!(f, "Penta(U{:x}, U{:x}, U{:x}, U{:x}, U{:x}, {}{}{}{}{})", c1, c2, c3, c4,c5, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap(), std::char::from_u32(c4).unwrap(),   std::char::from_u32(c5).unwrap()),
+            Syllable::Hexa(c1, c2, c3, c4, c5, c6) => write!(f, "Hexa(U{:x}, U{:x}, U{:x}, U{:x}, U{:x}, U{:x} {}{}{}{}{}{})", c1, c2, c3, c4, c5, c6, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap(), std::char::from_u32(c4).unwrap(), char::from_u32(c5).unwrap(), std::char::from_u32(c6).unwrap()),
+            Syllable::Septa(c1, c2, c3, c4, c5, c6, c7) => write!(f, "Septa(U{:x}, U{:x}, U{:x}, U{:x}, U{:x}, U{:x}, U{:x}, {}{}{}{}{}{}{})", c1, c2, c3, c4, c5, c6, c7, std::char::from_u32(c1).unwrap(), std::char::from_u32(c2).unwrap(), std::char::from_u32(c3).unwrap(), std::char::from_u32(c4).unwrap(), std::char::from_u32(c5).unwrap(), std::char::from_u32(c6).unwrap(), std::char::from_u32(c7).unwrap()),
+            Syllable::Multi(ref v) => {
+                write!(f, "Multi(")?;
+                for c in v.iter() {
+                    write!(f, "U{:x}, ", c)?;
+                }
+                write!(f, ")")
+            },
             Syllable::Meta(c) => write!(f, "Meta(U{:x}, {})", c, std::char::from_u32(c).unwrap()),
         }
     }
@@ -96,6 +111,25 @@ struct SyllableMapping {
 
 impl SyllableMapping {
 
+    // Creates a new syllable mapping from a configuration.
+    fn new(config:&Config) -> Self {
+        let mut syllable_token = HashMap::new();
+        let mut token_syllable = Vec::new();
+        for i in 0..128 {
+            syllable_token.insert(Syllable::Mono(i), i);
+            token_syllable.push(Syllable::Mono(i));
+        }
+        syllable_token.insert(Syllable::Meta(config.unknown), 128);
+        token_syllable.push(Syllable::Meta(config.unknown));
+        let mut i = 129;
+        for c in config.end_of_text.iter() {
+            syllable_token.insert(Syllable::Meta(*c), i);
+            token_syllable.push(Syllable::Meta(*c));
+            i += 1;
+        }
+        SyllableMapping { syllable_token, token_syllable }
+    }
+
     // Adds a syllable to the syllabary and returns the encoded token.
     fn syllable_code(&self, syllable : Syllable, config:&Config) -> u32 {
         if let Some(&token) = self.syllable_token.get(&syllable) {
@@ -106,7 +140,7 @@ impl SyllableMapping {
 
     fn get_syllable(&self, token : u32) -> Option<Syllable> {
         if token < self.token_syllable.len() as u32 {
-            Some(self.token_syllable[token as usize])
+            Some(self.token_syllable[token as usize].clone())
         } else {
             None
         }
@@ -118,9 +152,21 @@ impl SyllableMapping {
             return ;
         }
         let token = self.token_syllable.len() as u32;
-        self.syllable_token.insert(syllable, token);
+        self.syllable_token.insert(syllable.clone(), token);
         self.token_syllable.push(syllable);
     }
+
+    fn to_syllable_mapping_file(&self) -> SyllableMappingFile {
+        let mut syllables = Vec::new();
+        let mut maximum = 0;
+        for (s, t) in self.syllable_token.iter() {
+            syllables.push(SyllableToken { syllable : s.clone(), token : *t });
+            if *t > maximum {
+                maximum = *t;
+            }
+        }
+        SyllableMappingFile { syllables , maximum }
+    }   
 }
 
 /// Intermediate representation of various Brahmic Script symbols.
@@ -395,67 +441,36 @@ impl Converter {
         Converter { stack: Vec::new(), syllables: Vec::new() }
     }
 
-    fn clear_stack(&mut self, virama:u32) {
+    fn clear_stack(&mut self) -> bool {
         if self.stack.is_empty() {
-            return;
+            return true;
         }
-        let top = self.stack.pop().unwrap().get_u32();
-        if self.stack.is_empty() {
+        if self.stack.len() == 1 {
+            let top = self.stack.pop().unwrap().get_u32();
             self.syllables.push(Syllable::Mono(top));
-            return;
+            return true;
         }
-        let second = self.stack.pop().unwrap().get_u32();
-        if self.stack.is_empty() {
-            self.syllables.push(Syllable::Di(second, top));
-            return;
-        }
-        let third = self.stack.pop().unwrap().get_u32();
-        if self.stack.is_empty() {
-            if second == virama {
-                self.syllables.push(Syllable::Cc(third, top));
+        if self.stack.len() <= 8 {
+            let mut v = Vec::new();
+            for s in self.stack.iter() {
+                v.push(s.get_u32());
             }
-            else {
-                 self.syllables.push(Syllable::Cvv(third, second, top));
-            }
-            return;
+            self.syllables.push(Syllable::Multi(v));
+            self.stack.clear();
+            return true;
         }
-        let fourth = self.stack.pop().unwrap().get_u32();
-        if self.stack.is_empty() {
-            if third == virama {
-                self.syllables.push(Syllable::Cvc(fourth, second, top));
-            }
-            else {
-                panic!("expected virama in second position: {} {} {} {} ", 
-                            std::char::from_u32(fourth).unwrap(),
-                            std::char::from_u32(third).unwrap(),
-                            std::char::from_u32(second).unwrap(),
-                            std::char::from_u32(top).unwrap());
-            }
-            return;
+        println!("Stack size = {}", self.stack.len());
+        let mut string = String::new();
+        for s in self.stack.iter() {
+            string.push(std::char::from_u32(s.get_u32()).unwrap());
         }
-        let fifth = self.stack.pop().unwrap().get_u32();
-        if fourth != virama {
-            panic!("expected virama in second position: {} {} {} {} {}", 
-                        std::char::from_u32(fifth).unwrap(),
-                        std::char::from_u32(fourth).unwrap(),
-                        std::char::from_u32(third).unwrap(),
-                        std::char::from_u32(second).unwrap(),
-                        std::char::from_u32(top).unwrap());
-        }
-        if !self.stack.is_empty() {
-            panic!("unexpected char sequence: {} {} {} {} {} (continues for {}) ", 
-                        std::char::from_u32(fifth).unwrap(),
-                        std::char::from_u32(fourth).unwrap(),
-                        std::char::from_u32(third).unwrap(),
-                        std::char::from_u32(second).unwrap(),
-                        std::char::from_u32(top).unwrap(),
-                        self.stack.len());
-        }
-       self.syllables.push(Syllable::Cvvc(fifth, third, second, top));
+        println!("Too big a stack to clear = {} ({})", string, self.stack.len());
+        self.stack.clear();
+        false
     }
 
-    pub fn finish(&mut self, virama:u32) {
-        self.clear_stack(virama);
+    pub fn finish(&mut self, virama:u32) -> bool {
+        self.clear_stack()
     }
 
     pub fn add_code_point(&mut self, symbol:&SymbolInfo, virama:u32) -> Result<(), String> {
@@ -468,13 +483,20 @@ impl Converter {
                 self.stack.push(symbol.clone());
                 return Ok(());
             }
-            self.clear_stack(virama);
-            self.stack.push(*symbol);
-            return Ok(());
+            if self.clear_stack() {
+                self.stack.push(*symbol);
+                return Ok(());
+            } else {
+                return Err(format!("error in text before consonant {}", std::char::from_u32(symbol.get_u32()).unwrap()));
+            }
         }
         if let SymbolInfo::Vowel(_) = symbol {
-            self.clear_stack(virama);
-            self.stack.push(*symbol);
+            if self.clear_stack() {
+                self.stack.push(*symbol);
+                return Ok(());
+            } else {
+                return Err(format!("error in text before vowel {}", std::char::from_u32(symbol.get_u32()).unwrap()));
+            }
         }
         if let SymbolInfo::VowelSign(_) = symbol {
             self.stack.push(*symbol);
@@ -492,137 +514,35 @@ impl Converter {
                 return Err(format!("unexpected virama {}", std::char::from_u32(*v).unwrap()));
             }
             if self.stack.len() != 1 {
-                return Err(format!("unexpected virama {} when stack size is {}", std::char::from_u32(*v).unwrap(), self.stack.len()));
+               // return Err(format!("unexpected virama {} when stack size is {}", std::char::from_u32(*v).unwrap(), self.stack.len()));
             }
             self.stack.push(*symbol);
             return Ok(());
         }
         if let SymbolInfo::Digit(d) = symbol {
-            self.clear_stack(virama);
-            self.syllables.push(Syllable::Mono(*d));
-            return Ok(());
+            if self.clear_stack() {
+                self.syllables.push(Syllable::Mono(*d));
+                return Ok(());
+            } else {
+                return Err(format!("error in text before digit {}", std::char::from_u32(*d).unwrap()));
+            }
         }
         if let SymbolInfo::EndMarker(v) = symbol {
-            self.clear_stack(virama);
-            self.syllables.push(Syllable::Mono(*v));
-            return Ok(());
+            if self.clear_stack() {
+                self.syllables.push(Syllable::Mono(*v));
+                return Ok(());
+            }
+            return Err("error in text before end marker".to_string());
         }
         if let SymbolInfo::OutOfRange(r) = symbol {
-            self.clear_stack(virama);
-            self.syllables.push(Syllable::Mono(*r));
-            return Ok(());
+            if self.clear_stack() {
+                self.syllables.push(Syllable::Mono(*r));
+                return Ok(());
+            }
+            return Err(format!("error in text before out of range {}", std::char::from_u32(*r).unwrap()));
         }
         Ok(())
     }
-}
-// reads the next token into syllabary
-// take the first character.
-// if it is a consonant,
-//        read the next character. If is a vowel_symbol, then create a diphthong.
-//                                 If it is a virama, then read the next character. If it is a
-//                                 separator, then a halanth diphong is created.
-//                                 if it is a consonant, then check the next character. If it is a vowel_symbol, then create a triphthong.
-//                                 if it is a separator, then create a halanth triphthong.
-//  if it is a vowel, then check the next character. if it is a vowel_suffix, then create a monophthong.
-//                    else create a monophthong with the vowel.
-//  if it is a digit, then add ascii value to the syllabary.
-//  if it is a separator, then add the ascii value to the syllabary.
-//  if it is reserved, panic
-//  if it is ignored, ignore
-fn read_next_syllable(contents:&[u32], syllabary:&SyllableMapping, config:&Config, line_no:usize, col_no:usize) -> (usize, u32) {
-
-    if contents.is_empty() {
-        return (0, 0);
-    }
-
-    let first = contents[0];
-    if config.is_reserved(first) {
-        println!("Reserved character found UC{:x} at {}:{}", first, line_no, col_no);
-        return (1, 0);
-    }
-    if first < 128 {
-        return (1, syllabary.syllable_code(Syllable::Mono(first), config));
-    }
-    if config.is_ignored(first) {
-        return (1, 1);
-    }
-    if config.is_digit(first) {
-        return (1, syllabary.syllable_code(Syllable::Mono(config.to_ascii_digit(first)), config));
-    }
-    if config.is_separator(first) {
-        return (1, syllabary.syllable_code(Syllable::Mono(first), config));
-    }
-    if config.is_vowel_symbol(first) {
-        //println!("Vowel symbol found U{:x} at line {}:{}", first, line_no, col_no);
-        return (1,0);
-        
-    }
-    if config.is_vowel_suffix(first) {
-        panic!("Vowel suffix found U{:x} at line {}:{}", first, line_no, col_no);
-    }
-
-    if config.is_vowel(first) {
-        if contents.len() == 1 {
-            return (1, syllabary.syllable_code(Syllable::Mono(first), config));
-        }
-        let second = contents[1];
-        if config.is_vowel_suffix(second) {
-            return (2, syllabary.syllable_code(Syllable::Di(first, second), config));
-        }
-        return (1, syllabary.syllable_code(Syllable::Mono(first), config));
-    }
-
-    if config.is_consonant(first) {
-        if contents.len() == 1 {
-            return (1, syllabary.syllable_code(Syllable::Mono(first), config));
-        }
-        let second = contents[1];
-        if config.is_virama(second) {
-            if contents.len() == 2 {
-                return (2, syllabary.syllable_code(Syllable::Di(first, second), config));
-            }
-            let third = contents[2];
-            if config.is_separator(third) {
-                return (2, syllabary.syllable_code(Syllable::Di(first, second), config));
-            }
-            if config.is_consonant(third) {
-                if contents.len() == 3 {
-                    return (3, syllabary.syllable_code(Syllable::Cc(first, third), config));
-                }
-                let fourth = contents[3];
-                if config.is_vowel_symbol(fourth) {
-                    if contents.len() == 4 {
-                        return (4, syllabary.syllable_code(Syllable::Cvc(first, third, fourth), config));
-                    }
-                    let fifth = contents[4];
-                    if config.is_vowel_suffix(fifth) {
-                        return (5, syllabary.syllable_code(Syllable::Cvvc(first, third, fourth, fifth), config));
-                    }
-
-                    return (4, syllabary.syllable_code(Syllable::Cvc(first, third, fourth), config));
-                }
-                return (3, syllabary.syllable_code(Syllable::Cc(first, third), config));
-            }
-            if config.is_vowel_symbol(third) {
-                //println!("Vowel symbol found U0{:x}{:x}{:x} following a virama at {}:{} ", first, second, third, line_no, col_no);
-                return (3, 0);
-            }
-            return (3, syllabary.syllable_code(Syllable::Cc(first, second), config));
-        }
-        if config.is_vowel_symbol(second) {
-            if contents.len() == 2 {
-                return (2, syllabary.syllable_code(Syllable::Di(first, second), config));
-            }
-            let third = contents[2];
-            if config.is_vowel_suffix(third) {
-                return (3, syllabary.syllable_code(Syllable::Cvv(first, second, third), config));
-            }
-
-            return (2, syllabary.syllable_code(Syllable::Di(first, second), config));
-        }
-    }
-
-    (1, syllabary.syllable_code(Syllable::Mono(first), config))
 }
 
 #[derive(Serialize, Deserialize)]
@@ -646,12 +566,15 @@ impl SyllableMappingFile {
     }
 
     fn to_syllable_mapping(&self, config:&Config) -> SyllableMapping {
+        if self.syllables.is_empty() {
+            return SyllableMapping::new(config);
+        }
         let mut tokens = Vec::new();
         tokens.resize((self.maximum + 1) as usize, Syllable::Mono(0));
         let mut table = HashMap::new();
         for syllable in self.syllables.iter() {
-            tokens[syllable.token as usize] = syllable.syllable;
-            table.insert(syllable.syllable, syllable.token);
+            tokens[syllable.token as usize] = syllable.syllable.clone();
+            table.insert(syllable.syllable.clone(), syllable.token);
         }
         let mut sm = SyllableMapping { syllable_token : table, token_syllable : tokens };
         sm.add_syllable(Syllable::Meta(config.unknown));
@@ -669,28 +592,57 @@ struct EncodedText {
     lines : Vec<Vec<u32>>,
 }
 
+fn collect_vocab(contents:&[u32], syllabary:&mut SyllableMapping,config:&Config) -> bool {
+    let mut result = true;
+    let mut converter = Converter::new();
+    let mut i = 0;
+    let mut line_no = 1;
+    let mut col_no = 1;
+    while i < contents.len() {
+        let symbol_info = config.to_symbol_info(contents[i]);
+        if let Err(msg) = converter.add_code_point(&symbol_info, config.virama()) {
+            println!("{} at {}:{}. Current char = {}", msg, line_no, col_no, std::char::from_u32(contents[i]).unwrap());
+            result = false;
+        }
+        if symbol_info.get_u32() == 0xA {
+            line_no += 1;
+            col_no = 1;
+        } else {
+            col_no += 1;
+        }
+        i += 1;
+    }
+    result = converter.finish(config.virama()) && result;
+    for s in converter.syllables.iter() {
+        syllabary.add_syllable(s.clone());
+    }
+    result
+}
 fn encode_contents(contents:&[u32], syllabary:&SyllableMapping, config:&Config, insert_eof:bool) -> Vec<u32> {
     let mut encoded = Vec::new();
     if insert_eof {
         encoded.push(syllabary.syllable_code(Syllable::Meta(*config.end_of_text.last().unwrap()), config));
     }
+    let mut converter = Converter::new();
     let mut i = 0;
     let mut line_no = 1;
     let mut col_no = 1;
     while i < contents.len() {
-        while i < contents.len() {
-            let (n, token) = read_next_syllable(&contents[i..], syllabary, config, line_no, col_no);
-            if token != 0 {
-                encoded.push(token);
-                if token == 0xA {
-                    line_no += 1;
-                    col_no = 1;
-                } else {
-                    col_no += n;
-                }
-            }
-            i += n;
+        let symbol_info = config.to_symbol_info(contents[i]);
+        if let Err(msg) = converter.add_code_point(&symbol_info, config.virama()) {
+            println!("{} at {}:{}. Current char = {}", msg, line_no, col_no, std::char::from_u32(contents[i]).unwrap());
         }
+        if symbol_info.get_u32() == 0xA {
+            line_no += 1;
+            col_no = 1;
+        } else {
+            col_no += 1;
+        }
+        i += 1;
+    }
+    converter.finish(config.virama());
+    for s in converter.syllables.iter() {
+        encoded.push(syllabary.syllable_code(s.clone(), config));
     }
     encoded
 }
@@ -718,7 +670,7 @@ mod telugu_tests{
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, config.virama()).unwrap();
         }
-        converter.finish(config.virama());
+        assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
         for s in converter.syllables.iter() {
             s.append_char(&mut round_trip, &config);
@@ -737,7 +689,7 @@ mod telugu_tests{
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, config.virama()).unwrap();
         }
-        converter.finish(config.virama());
+        assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
         for s in converter.syllables.iter() {
             s.append_char(&mut round_trip, &config);
@@ -756,7 +708,7 @@ mod telugu_tests{
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, config.virama()).unwrap();
         }
-        converter.finish(config.virama());
+        assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
         for s in converter.syllables.iter() {
             s.append_char(&mut round_trip, &config);
@@ -774,7 +726,7 @@ mod telugu_tests{
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, config.virama()).unwrap();
         }
-        converter.finish(config.virama());
+        assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
         for s in converter.syllables.iter() {
             s.append_char(&mut round_trip, &config);
@@ -792,12 +744,67 @@ mod telugu_tests{
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, config.virama()).unwrap();
         }
-        converter.finish(config.virama());
+        assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
         for s in converter.syllables.iter() {
             s.append_char(&mut round_trip, &config);
         }
         assert_eq!(3, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn raashtram() {
+        let test_word = "రాష్ట్రం";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(2, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn bhattaacharya() {
+        let test_word = "భట్టాచార్య";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(4, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn vignyaana_saasthram() {
+        let test_word = "విజ్ఞానశాస్త్ర్రం";
+        let config = Config::new_telugu();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(5, converter.syllables.len());
         assert_eq!(test_word, round_trip);
     }
 }
@@ -949,6 +956,24 @@ impl Tokenizer {
         let contents = contents.unwrap();
         let encoded = encode_contents(&contents, &self.syllabary, &self.config, true);
         Ok(encoded)
+    }
+
+    fn collect_vocab(&mut self, input_file:String) -> PyResult<bool> {
+        let contents = read_unicode_file(&input_file);
+        if let Err(msg) = contents {
+            return Err(PyValueError::new_err(msg));
+        }
+        let contents = contents.unwrap();
+        let result = collect_vocab(&contents, &mut self.syllabary, &self.config);
+        Ok(result)
+    }
+
+    fn write_vocab_file(&self, output_file:String) -> PyResult<()> {
+        let syllable_mapping = self.syllabary.to_syllable_mapping_file();
+        let json = serde_json::to_string(&syllable_mapping).unwrap();
+        let mut file = File::create(output_file).unwrap();
+        file.write_all(json.as_bytes()).unwrap();
+        Ok(())
     }
 }
 
