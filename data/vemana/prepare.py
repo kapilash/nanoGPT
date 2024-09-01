@@ -1,7 +1,7 @@
 """
-Encode Poetry from Vemana Satakam into characters using brahmi_lipi tokenizer
+Encode Poetry from Vemana Satakam into characters using brahmi_script tokenizer
 """
-import brahmi_lipi
+import brahmi_script
 import os
 import pickle
 import requests
@@ -14,7 +14,7 @@ def encode_text(tokenizer, file_path):
     file_size = os.path.getsize(file_path)
     encoded = tokenizer.encode_file(file_path)
     for e in encoded :
-        if e >= 10337 :
+        if e >= 3200 :
             print("Found ", e)
     return torch.tensor(encoded, dtype=torch.int16) 
 
@@ -22,7 +22,7 @@ def encode_text(tokenizer, file_path):
 if __name__ == "__main__":
     args = sys.argv[1:]
     training_file = args[0]
-    tokenizer = brahmi_lipi.TeluguTokenizer("smf.json")
+    tokenizer = brahmi_script.Tokenizer("telugu", "smf.json")
     train_tensor = encode_text(tokenizer, training_file)
     train_ids = train_tensor.numpy(force=True)
     train_ids.tofile(os.path.join(os.path.dirname(__file__), "train.bin"))
@@ -34,9 +34,9 @@ if __name__ == "__main__":
     print("Validation data saved to val.bin")
 
     meta = {
-        'vocab_size': 10337,
-        'itos': "brahmi_lipi.TeluguTokenizer",
-        'stoi': "brahmi_lipi.TeluguTokenizer",
+        'vocab_size': 3200,
+        'itos': "brahmi_script.Tokenizer",
+        'stoi': "brahmi_script.Tokenizer",
     }
     with open(os.path.join(os.path.dirname(__file__), 'meta.pkl'), 'wb') as f:
         pickle.dump(meta, f)
