@@ -1,0 +1,8989 @@
+{
+  "syllables": [
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2366
+        ]
+      },
+      "token": 278
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2370
+        ]
+      },
+      "token": 448
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2369
+        ]
+      },
+      "token": 432
+    },
+    {
+      "syllable": {
+        "Mono": 92
+      },
+      "token": 92
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2361
+        ]
+      },
+      "token": 885
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2325,
+          2379,
+          2306
+        ]
+      },
+      "token": 619
+    },
+    {
+      "syllable": {
+        "Mono": 0
+      },
+      "token": 0
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2381,
+          2358,
+          2375
+        ]
+      },
+      "token": 952
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2367,
+          2306
+        ]
+      },
+      "token": 922
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2369
+        ]
+      },
+      "token": 607
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2368
+        ]
+      },
+      "token": 602
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2368,
+          2306
+        ]
+      },
+      "token": 723
+    },
+    {
+      "syllable": {
+        "Mono": 90
+      },
+      "token": 90
+    },
+    {
+      "syllable": {
+        "Mono": 55
+      },
+      "token": 55
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2331,
+          2366
+        ]
+      },
+      "token": 657
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2381,
+          2346,
+          2370
+        ]
+      },
+      "token": 848
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2330,
+          2375
+        ]
+      },
+      "token": 973
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2379,
+          2306
+        ]
+      },
+      "token": 809
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2395,
+          2366
+        ]
+      },
+      "token": 964
+    },
+    {
+      "syllable": {
+        "Mono": 14
+      },
+      "token": 14
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2370
+        ]
+      },
+      "token": 228
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2369
+        ]
+      },
+      "token": 162
+    },
+    {
+      "syllable": {
+        "Mono": 115
+      },
+      "token": 115
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 760
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2361,
+          2366
+        ]
+      },
+      "token": 815
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2350,
+          2366,
+          2305
+        ]
+      },
+      "token": 942
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2369
+        ]
+      },
+      "token": 282
+    },
+    {
+      "syllable": {
+        "Mono": 46
+      },
+      "token": 46
+    },
+    {
+      "syllable": {
+        "Mono": 64
+      },
+      "token": 64
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2375
+        ]
+      },
+      "token": 263
+    },
+    {
+      "syllable": {
+        "Mono": 2352
+      },
+      "token": 135
+    },
+    {
+      "syllable": {
+        "Mono": 2337
+      },
+      "token": 497
+    },
+    {
+      "syllable": {
+        "Mono": 120
+      },
+      "token": 120
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2379
+        ]
+      },
+      "token": 380
+    },
+    {
+      "syllable": {
+        "Mono": 2397
+      },
+      "token": 471
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2381,
+          2340
+        ]
+      },
+      "token": 752
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2366
+        ]
+      },
+      "token": 287
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2359,
+          2366
+        ]
+      },
+      "token": 783
+    },
+    {
+      "syllable": {
+        "Mono": 121
+      },
+      "token": 121
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2368
+        ]
+      },
+      "token": 336
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2368
+        ]
+      },
+      "token": 577
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381,
+          2335,
+          2368
+        ]
+      },
+      "token": 396
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2306
+        ]
+      },
+      "token": 759
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2366
+        ]
+      },
+      "token": 324
+    },
+    {
+      "syllable": {
+        "Mono": 2
+      },
+      "token": 2
+    },
+    {
+      "syllable": {
+        "Meta": 2404
+      },
+      "token": 129
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2369,
+          2307
+        ]
+      },
+      "token": 869
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2379
+        ]
+      },
+      "token": 415
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2344
+        ]
+      },
+      "token": 870
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2370,
+          2306
+        ]
+      },
+      "token": 642
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2370,
+          2305
+        ]
+      },
+      "token": 828
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2381,
+          2348
+        ]
+      },
+      "token": 578
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2314,
+          2305
+        ]
+      },
+      "token": 610
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2366
+        ]
+      },
+      "token": 313
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2375,
+          2306
+        ]
+      },
+      "token": 340
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 683
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2379
+        ]
+      },
+      "token": 724
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2368
+        ]
+      },
+      "token": 737
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2332,
+          2364
+        ]
+      },
+      "token": 438
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2368
+        ]
+      },
+      "token": 834
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364
+        ]
+      },
+      "token": 374
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2369,
+          2305
+        ]
+      },
+      "token": 843
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2370,
+          2305
+        ]
+      },
+      "token": 653
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2367
+        ]
+      },
+      "token": 372
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2366
+        ]
+      },
+      "token": 170
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2369,
+          2306
+        ]
+      },
+      "token": 529
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2375,
+          2306
+        ]
+      },
+      "token": 194
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2310,
+          2306
+        ]
+      },
+      "token": 283
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2379
+        ]
+      },
+      "token": 365
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2375,
+          2306
+        ]
+      },
+      "token": 390
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2381,
+          2340
+        ]
+      },
+      "token": 663
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2375,
+          2306
+        ]
+      },
+      "token": 837
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2366,
+          2306
+        ]
+      },
+      "token": 887
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2366,
+          2306
+        ]
+      },
+      "token": 625
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2370,
+          2305
+        ]
+      },
+      "token": 669
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2370,
+          2306
+        ]
+      },
+      "token": 775
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2366
+        ]
+      },
+      "token": 819
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2370,
+          2305
+        ]
+      },
+      "token": 876
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2359,
+          2381,
+          2350,
+          2368
+        ]
+      },
+      "token": 878
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2375
+        ]
+      },
+      "token": 277
+    },
+    {
+      "syllable": {
+        "Mono": 2330
+      },
+      "token": 176
+    },
+    {
+      "syllable": {
+        "Mono": 34
+      },
+      "token": 34
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2381,
+          2357,
+          2366
+        ]
+      },
+      "token": 346
+    },
+    {
+      "syllable": {
+        "Mono": 72
+      },
+      "token": 72
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2379
+        ]
+      },
+      "token": 555
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2344,
+          2366
+        ]
+      },
+      "token": 453
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2371,
+          2306
+        ]
+      },
+      "token": 682
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2380
+        ]
+      },
+      "token": 338
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2380,
+          2306
+        ]
+      },
+      "token": 731
+    },
+    {
+      "syllable": {
+        "Mono": 15
+      },
+      "token": 15
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2325,
+          2368
+        ]
+      },
+      "token": 689
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2361,
+          2369
+        ]
+      },
+      "token": 814
+    },
+    {
+      "syllable": {
+        "Mono": 49
+      },
+      "token": 49
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2339,
+          2375
+        ]
+      },
+      "token": 479
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2305
+        ]
+      },
+      "token": 695
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2325,
+          2366
+        ]
+      },
+      "token": 614
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2370,
+          2305
+        ]
+      },
+      "token": 703
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2340,
+          2375
+        ]
+      },
+      "token": 407
+    },
+    {
+      "syllable": {
+        "Mono": 114
+      },
+      "token": 114
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2394,
+          2369
+        ]
+      },
+      "token": 811
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2358,
+          2375
+        ]
+      },
+      "token": 946
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2375,
+          2306
+        ]
+      },
+      "token": 250
+    },
+    {
+      "syllable": {
+        "Mono": 33
+      },
+      "token": 33
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2347
+        ]
+      },
+      "token": 943
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2335,
+          2370
+        ]
+      },
+      "token": 717
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2366
+        ]
+      },
+      "token": 344
+    },
+    {
+      "syllable": {
+        "Mono": 100
+      },
+      "token": 100
+    },
+    {
+      "syllable": {
+        "Mono": 2347
+      },
+      "token": 392
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2335
+        ]
+      },
+      "token": 750
+    },
+    {
+      "syllable": {
+        "Mono": 2326
+      },
+      "token": 308
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2379
+        ]
+      },
+      "token": 636
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2369,
+          2305
+        ]
+      },
+      "token": 501
+    },
+    {
+      "syllable": {
+        "Mono": 25
+      },
+      "token": 25
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2369
+        ]
+      },
+      "token": 137
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2361,
+          2368,
+          2306
+        ]
+      },
+      "token": 794
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2376,
+          2306
+        ]
+      },
+      "token": 139
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2369
+        ]
+      },
+      "token": 326
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2367
+        ]
+      },
+      "token": 275
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2350,
+          2375
+        ]
+      },
+      "token": 926
+    },
+    {
+      "syllable": {
+        "Mono": 60
+      },
+      "token": 60
+    },
+    {
+      "syllable": {
+        "Mono": 86
+      },
+      "token": 86
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2357
+        ]
+      },
+      "token": 486
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2364,
+          2368
+        ]
+      },
+      "token": 560
+    },
+    {
+      "syllable": {
+        "Mono": 53
+      },
+      "token": 53
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2366,
+          2305
+        ]
+      },
+      "token": 508
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2368
+        ]
+      },
+      "token": 769
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2360
+        ]
+      },
+      "token": 379
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2367
+        ]
+      },
+      "token": 874
+    },
+    {
+      "syllable": {
+        "Mono": 65279
+      },
+      "token": 976
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2354
+        ]
+      },
+      "token": 553
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2379,
+          2306
+        ]
+      },
+      "token": 381
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2370,
+          2305
+        ]
+      },
+      "token": 409
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2366
+        ]
+      },
+      "token": 410
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2366
+        ]
+      },
+      "token": 397
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2381,
+          2360
+        ]
+      },
+      "token": 503
+    },
+    {
+      "syllable": {
+        "Mono": 82
+      },
+      "token": 82
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2381,
+          2352,
+          2367
+        ]
+      },
+      "token": 842
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2326,
+          2379
+        ]
+      },
+      "token": 548
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2375,
+          2306
+        ]
+      },
+      "token": 651
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2366,
+          2306
+        ]
+      },
+      "token": 493
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2381,
+          2325,
+          2364,
+          2368
+        ]
+      },
+      "token": 923
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2370
+        ]
+      },
+      "token": 583
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2368,
+          2306
+        ]
+      },
+      "token": 702
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2380
+        ]
+      },
+      "token": 719
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2379
+        ]
+      },
+      "token": 376
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2376
+        ]
+      },
+      "token": 881
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2325
+        ]
+      },
+      "token": 525
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2379,
+          2306
+        ]
+      },
+      "token": 782
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2330,
+          2375
+        ]
+      },
+      "token": 468
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2368
+        ]
+      },
+      "token": 604
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2364,
+          2366
+        ]
+      },
+      "token": 334
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2375,
+          2306
+        ]
+      },
+      "token": 363
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2331,
+          2375
+        ]
+      },
+      "token": 859
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2379
+        ]
+      },
+      "token": 369
+    },
+    {
+      "syllable": {
+        "Mono": 8204
+      },
+      "token": 893
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2366
+        ]
+      },
+      "token": 439
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2366
+        ]
+      },
+      "token": 492
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2354,
+          2368
+        ]
+      },
+      "token": 626
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2376
+        ]
+      },
+      "token": 312
+    },
+    {
+      "syllable": {
+        "Mono": 2350
+      },
+      "token": 133
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2370
+        ]
+      },
+      "token": 195
+    },
+    {
+      "syllable": {
+        "Mono": 61
+      },
+      "token": 61
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2344
+        ]
+      },
+      "token": 618
+    },
+    {
+      "syllable": {
+        "Mono": 126
+      },
+      "token": 126
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2340,
+          2367
+        ]
+      },
+      "token": 221
+    },
+    {
+      "syllable": {
+        "Mono": 41
+      },
+      "token": 41
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2398
+        ]
+      },
+      "token": 197
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2354,
+          2366
+        ]
+      },
+      "token": 467
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2375
+        ]
+      },
+      "token": 477
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2323,
+          2306
+        ]
+      },
+      "token": 329
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340
+        ]
+      },
+      "token": 412
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2375
+        ]
+      },
+      "token": 199
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2306
+        ]
+      },
+      "token": 721
+    },
+    {
+      "syllable": {
+        "Mono": 125
+      },
+      "token": 125
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2326,
+          2375
+        ]
+      },
+      "token": 325
+    },
+    {
+      "syllable": {
+        "Mono": 101
+      },
+      "token": 101
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2366
+        ]
+      },
+      "token": 944
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2375,
+          2306
+        ]
+      },
+      "token": 191
+    },
+    {
+      "syllable": {
+        "Mono": 56
+      },
+      "token": 56
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2360
+        ]
+      },
+      "token": 954
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2376
+        ]
+      },
+      "token": 218
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2366,
+          2306
+        ]
+      },
+      "token": 864
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2375
+        ]
+      },
+      "token": 359
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2367,
+          2306
+        ]
+      },
+      "token": 770
+    },
+    {
+      "syllable": {
+        "Mono": 2344
+      },
+      "token": 155
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2366
+        ]
+      },
+      "token": 152
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2381,
+          2357,
+          2369
+        ]
+      },
+      "token": 543
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2369
+        ]
+      },
+      "token": 201
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2375
+        ]
+      },
+      "token": 243
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381,
+          2335,
+          2375
+        ]
+      },
+      "token": 630
+    },
+    {
+      "syllable": {
+        "Mono": 106
+      },
+      "token": 106
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2366,
+          2305
+        ]
+      },
+      "token": 370
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2366
+        ]
+      },
+      "token": 296
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2370,
+          2305
+        ]
+      },
+      "token": 670
+    },
+    {
+      "syllable": {
+        "Mono": 104
+      },
+      "token": 104
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2379,
+          2306
+        ]
+      },
+      "token": 767
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2375
+        ]
+      },
+      "token": 268
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2369
+        ]
+      },
+      "token": 457
+    },
+    {
+      "syllable": {
+        "Mono": 52
+      },
+      "token": 52
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2359,
+          2366
+        ]
+      },
+      "token": 757
+    },
+    {
+      "syllable": {
+        "Mono": 36
+      },
+      "token": 36
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2370,
+          2306
+        ]
+      },
+      "token": 959
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2331,
+          2370
+        ]
+      },
+      "token": 934
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2370,
+          2306
+        ]
+      },
+      "token": 897
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2370
+        ]
+      },
+      "token": 310
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2381,
+          2350,
+          2368
+        ]
+      },
+      "token": 462
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2381,
+          2340,
+          2366
+        ]
+      },
+      "token": 641
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2370
+        ]
+      },
+      "token": 404
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2340
+        ]
+      },
+      "token": 593
+    },
+    {
+      "syllable": {
+        "Mono": 119
+      },
+      "token": 119
+    },
+    {
+      "syllable": {
+        "Mono": 20
+      },
+      "token": 20
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2330,
+          2366
+        ]
+      },
+      "token": 345
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2368,
+          2306
+        ]
+      },
+      "token": 295
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2375
+        ]
+      },
+      "token": 499
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2370,
+          2306
+        ]
+      },
+      "token": 649
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2370
+        ]
+      },
+      "token": 955
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2306
+        ]
+      },
+      "token": 502
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2369
+        ]
+      },
+      "token": 239
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2381,
+          2342,
+          2366
+        ]
+      },
+      "token": 928
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2313,
+          2305
+        ]
+      },
+      "token": 418
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2370
+        ]
+      },
+      "token": 585
+    },
+    {
+      "syllable": {
+        "Mono": 69
+      },
+      "token": 69
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2342,
+          2368
+        ]
+      },
+      "token": 911
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2367
+        ]
+      },
+      "token": 304
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2375
+        ]
+      },
+      "token": 161
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2332,
+          2366
+        ]
+      },
+      "token": 658
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2381,
+          2351,
+          2379,
+          2306
+        ]
+      },
+      "token": 779
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 246
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2398,
+          2368
+        ]
+      },
+      "token": 930
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2398
+        ]
+      },
+      "token": 931
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2366
+        ]
+      },
+      "token": 227
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2364,
+          2369
+        ]
+      },
+      "token": 399
+    },
+    {
+      "syllable": {
+        "Mono": 8
+      },
+      "token": 8
+    },
+    {
+      "syllable": {
+        "Mono": 2392
+      },
+      "token": 264
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2375
+        ]
+      },
+      "token": 507
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2340,
+          2379,
+          2306
+        ]
+      },
+      "token": 398
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2392,
+          2379,
+          2306
+        ]
+      },
+      "token": 796
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2350,
+          2366
+        ]
+      },
+      "token": 470
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2367
+        ]
+      },
+      "token": 266
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2368,
+          2306
+        ]
+      },
+      "token": 280
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2305
+        ]
+      },
+      "token": 807
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2379
+        ]
+      },
+      "token": 624
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2354,
+          2369
+        ]
+      },
+      "token": 839
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2379,
+          2306
+        ]
+      },
+      "token": 818
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2370
+        ]
+      },
+      "token": 849
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2367,
+          2306
+        ]
+      },
+      "token": 902
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2367
+        ]
+      },
+      "token": 330
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2376
+        ]
+      },
+      "token": 806
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2381,
+          2357
+        ]
+      },
+      "token": 907
+    },
+    {
+      "syllable": {
+        "Mono": 2348
+      },
+      "token": 160
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2375,
+          2306
+        ]
+      },
+      "token": 754
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2366
+        ]
+      },
+      "token": 708
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2347,
+          2364
+        ]
+      },
+      "token": 321
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2376
+        ]
+      },
+      "token": 523
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2367
+        ]
+      },
+      "token": 482
+    },
+    {
+      "syllable": {
+        "Mono": 50
+      },
+      "token": 50
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2331,
+          2368
+        ]
+      },
+      "token": 417
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2350
+        ]
+      },
+      "token": 762
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2370
+        ]
+      },
+      "token": 262
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2360
+        ]
+      },
+      "token": 778
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2350
+        ]
+      },
+      "token": 481
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2380
+        ]
+      },
+      "token": 512
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381,
+          2336,
+          2367
+        ]
+      },
+      "token": 913
+    },
+    {
+      "syllable": {
+        "Mono": 23
+      },
+      "token": 23
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2366
+        ]
+      },
+      "token": 212
+    },
+    {
+      "syllable": {
+        "Meta": 2405
+      },
+      "token": 130
+    },
+    {
+      "syllable": {
+        "Mono": 2335
+      },
+      "token": 226
+    },
+    {
+      "syllable": {
+        "Mono": 2338
+      },
+      "token": 644
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2340
+        ]
+      },
+      "token": 565
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2370
+        ]
+      },
+      "token": 664
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2369
+        ]
+      },
+      "token": 136
+    },
+    {
+      "syllable": {
+        "Mono": 84
+      },
+      "token": 84
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2375
+        ]
+      },
+      "token": 205
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2366
+        ]
+      },
+      "token": 690
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2352
+        ]
+      },
+      "token": 972
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2305
+        ]
+      },
+      "token": 455
+    },
+    {
+      "syllable": {
+        "Mono": 7
+      },
+      "token": 7
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2381,
+          2342,
+          2369
+        ]
+      },
+      "token": 574
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2379
+        ]
+      },
+      "token": 925
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2367
+        ]
+      },
+      "token": 711
+    },
+    {
+      "syllable": {
+        "Mono": 116
+      },
+      "token": 116
+    },
+    {
+      "syllable": {
+        "Mono": 67
+      },
+      "token": 67
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2370,
+          2306
+        ]
+      },
+      "token": 302
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2381,
+          2352,
+          2368
+        ]
+      },
+      "token": 667
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2354
+        ]
+      },
+      "token": 676
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2380
+        ]
+      },
+      "token": 951
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2314,
+          2306
+        ]
+      },
+      "token": 540
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2369
+        ]
+      },
+      "token": 483
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2325,
+          2364
+        ]
+      },
+      "token": 949
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2397,
+          2375,
+          2306
+        ]
+      },
+      "token": 947
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2351,
+          2370,
+          2305
+        ]
+      },
+      "token": 469
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2326,
+          2370,
+          2305
+        ]
+      },
+      "token": 545
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2379
+        ]
+      },
+      "token": 601
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2366,
+          2305
+        ]
+      },
+      "token": 827
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2354,
+          2375
+        ]
+      },
+      "token": 600
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2327
+        ]
+      },
+      "token": 700
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2379
+        ]
+      },
+      "token": 822
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2361,
+          2375
+        ]
+      },
+      "token": 631
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2366,
+          2306
+        ]
+      },
+      "token": 236
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2370
+        ]
+      },
+      "token": 495
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2367
+        ]
+      },
+      "token": 853
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2340,
+          2379,
+          2306
+        ]
+      },
+      "token": 914
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2375,
+          2306
+        ]
+      },
+      "token": 449
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2370
+        ]
+      },
+      "token": 596
+    },
+    {
+      "syllable": {
+        "Mono": 79
+      },
+      "token": 79
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2360,
+          2366,
+          2306
+        ]
+      },
+      "token": 799
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2375
+        ]
+      },
+      "token": 252
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2366
+        ]
+      },
+      "token": 509
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2381,
+          2395
+        ]
+      },
+      "token": 761
+    },
+    {
+      "syllable": {
+        "Mono": 71
+      },
+      "token": 71
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2369
+        ]
+      },
+      "token": 172
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2364,
+          2368
+        ]
+      },
+      "token": 290
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2350
+        ]
+      },
+      "token": 433
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2360,
+          2379,
+          2306
+        ]
+      },
+      "token": 953
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2361,
+          2368,
+          2306
+        ]
+      },
+      "token": 787
+    },
+    {
+      "syllable": {
+        "Mono": 118
+      },
+      "token": 118
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2366
+        ]
+      },
+      "token": 223
+    },
+    {
+      "syllable": {
+        "Mono": 44
+      },
+      "token": 44
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2367
+        ]
+      },
+      "token": 198
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2366
+        ]
+      },
+      "token": 452
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2311,
+          2306
+        ]
+      },
+      "token": 623
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2366,
+          2306
+        ]
+      },
+      "token": 748
+    },
+    {
+      "syllable": {
+        "Mono": 59
+      },
+      "token": 59
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2348
+        ]
+      },
+      "token": 741
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2357
+        ]
+      },
+      "token": 734
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2369
+        ]
+      },
+      "token": 595
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2364
+        ]
+      },
+      "token": 355
+    },
+    {
+      "syllable": {
+        "Mono": 81
+      },
+      "token": 81
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2340,
+          2368
+        ]
+      },
+      "token": 598
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2366
+        ]
+      },
+      "token": 242
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2370
+        ]
+      },
+      "token": 513
+    },
+    {
+      "syllable": {
+        "Mono": 58
+      },
+      "token": 58
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2306
+        ]
+      },
+      "token": 179
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2350
+        ]
+      },
+      "token": 416
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2339,
+          2366
+        ]
+      },
+      "token": 478
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2370,
+          2306
+        ]
+      },
+      "token": 937
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2364,
+          2375
+        ]
+      },
+      "token": 309
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2367
+        ]
+      },
+      "token": 576
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2370
+        ]
+      },
+      "token": 517
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2360,
+          2366
+        ]
+      },
+      "token": 788
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2325
+        ]
+      },
+      "token": 798
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2375
+        ]
+      },
+      "token": 684
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2368,
+          2306
+        ]
+      },
+      "token": 185
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2340,
+          2366
+        ]
+      },
+      "token": 753
+    },
+    {
+      "syllable": {
+        "Mono": 48
+      },
+      "token": 48
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2379
+        ]
+      },
+      "token": 882
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2344,
+          2366
+        ]
+      },
+      "token": 634
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2379
+        ]
+      },
+      "token": 261
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2370,
+          2306
+        ]
+      },
+      "token": 521
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2379,
+          2306
+        ]
+      },
+      "token": 546
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2380
+        ]
+      },
+      "token": 620
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2366
+        ]
+      },
+      "token": 209
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2375,
+          2306
+        ]
+      },
+      "token": 671
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2366,
+          2306
+        ]
+      },
+      "token": 466
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2366,
+          2305
+        ]
+      },
+      "token": 706
+    },
+    {
+      "syllable": {
+        "Mono": 22
+      },
+      "token": 22
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2379
+        ]
+      },
+      "token": 207
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2350
+        ]
+      },
+      "token": 444
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2379
+        ]
+      },
+      "token": 319
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2340
+        ]
+      },
+      "token": 969
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2361,
+          2366
+        ]
+      },
+      "token": 570
+    },
+    {
+      "syllable": {
+        "Mono": 35
+      },
+      "token": 35
+    },
+    {
+      "syllable": {
+        "Mono": 24
+      },
+      "token": 24
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2379,
+          2306
+        ]
+      },
+      "token": 423
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2306
+        ]
+      },
+      "token": 436
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2367
+        ]
+      },
+      "token": 143
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2376,
+          2306
+        ]
+      },
+      "token": 192
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2370,
+          2306
+        ]
+      },
+      "token": 520
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2370,
+          2306
+        ]
+      },
+      "token": 974
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2381,
+          2360
+        ]
+      },
+      "token": 458
+    },
+    {
+      "syllable": {
+        "Mono": 87
+      },
+      "token": 87
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2376
+        ]
+      },
+      "token": 559
+    },
+    {
+      "syllable": {
+        "Mono": 6
+      },
+      "token": 6
+    },
+    {
+      "syllable": {
+        "Mono": 73
+      },
+      "token": 73
+    },
+    {
+      "syllable": {
+        "Mono": 78
+      },
+      "token": 78
+    },
+    {
+      "syllable": {
+        "Mono": 98
+      },
+      "token": 98
+    },
+    {
+      "syllable": {
+        "Mono": 2354
+      },
+      "token": 144
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2369
+        ]
+      },
+      "token": 286
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2341
+        ]
+      },
+      "token": 393
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2375
+        ]
+      },
+      "token": 556
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2379,
+          2306
+        ]
+      },
+      "token": 356
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2357,
+          2368
+        ]
+      },
+      "token": 635
+    },
+    {
+      "syllable": {
+        "Mono": 38
+      },
+      "token": 38
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2381,
+          2398,
+          2369
+        ]
+      },
+      "token": 971
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2366,
+          2305
+        ]
+      },
+      "token": 725
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2379,
+          2306
+        ]
+      },
+      "token": 245
+    },
+    {
+      "syllable": {
+        "Mono": 2346
+      },
+      "token": 151
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2368,
+          2306
+        ]
+      },
+      "token": 812
+    },
+    {
+      "syllable": {
+        "Mono": 39
+      },
+      "token": 39
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2352
+        ]
+      },
+      "token": 305
+    },
+    {
+      "syllable": {
+        "Mono": 2328
+      },
+      "token": 337
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2342,
+          2368
+        ]
+      },
+      "token": 528
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2370
+        ]
+      },
+      "token": 558
+    },
+    {
+      "syllable": {
+        "Mono": 103
+      },
+      "token": 103
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2379
+        ]
+      },
+      "token": 722
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2330,
+          2375,
+          2306
+        ]
+      },
+      "token": 854
+    },
+    {
+      "syllable": {
+        "Mono": 110
+      },
+      "token": 110
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2366,
+          2305
+        ]
+      },
+      "token": 852
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2366,
+          2306
+        ]
+      },
+      "token": 222
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2397,
+          2368
+        ]
+      },
+      "token": 729
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2360,
+          2367
+        ]
+      },
+      "token": 898
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2360
+        ]
+      },
+      "token": 963
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2309,
+          2306
+        ]
+      },
+      "token": 385
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2370,
+          2305
+        ]
+      },
+      "token": 568
+    },
+    {
+      "syllable": {
+        "Mono": 108
+      },
+      "token": 108
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2368
+        ]
+      },
+      "token": 368
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2368
+        ]
+      },
+      "token": 298
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2369,
+          2305
+        ]
+      },
+      "token": 431
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2350,
+          2368
+        ]
+      },
+      "token": 801
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2370,
+          2305
+        ]
+      },
+      "token": 480
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2381,
+          2332,
+          2367
+        ]
+      },
+      "token": 940
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2361,
+          2375
+        ]
+      },
+      "token": 437
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2375
+        ]
+      },
+      "token": 408
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 605
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2375
+        ]
+      },
+      "token": 251
+    },
+    {
+      "syllable": {
+        "Meta": 2431
+      },
+      "token": 128
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2379
+        ]
+      },
+      "token": 599
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2375,
+          2306
+        ]
+      },
+      "token": 562
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2376
+        ]
+      },
+      "token": 388
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2354
+        ]
+      },
+      "token": 929
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2375
+        ]
+      },
+      "token": 267
+    },
+    {
+      "syllable": {
+        "Mono": 102
+      },
+      "token": 102
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2357,
+          2366
+        ]
+      },
+      "token": 891
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2330,
+          2368
+        ]
+      },
+      "token": 347
+    },
+    {
+      "syllable": {
+        "Mono": 13
+      },
+      "token": 13
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2366,
+          2306
+        ]
+      },
+      "token": 318
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2368,
+          2306
+        ]
+      },
+      "token": 699
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2375
+        ]
+      },
+      "token": 171
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2368,
+          2306
+        ]
+      },
+      "token": 966
+    },
+    {
+      "syllable": {
+        "Mono": 42
+      },
+      "token": 42
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2366,
+          2305
+        ]
+      },
+      "token": 274
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2379,
+          2306
+        ]
+      },
+      "token": 386
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2381,
+          2340
+        ]
+      },
+      "token": 589
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2368,
+          2306
+        ]
+      },
+      "token": 933
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2352,
+          2366
+        ]
+      },
+      "token": 591
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2381,
+          2350
+        ]
+      },
+      "token": 459
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2370
+        ]
+      },
+      "token": 435
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2381,
+          2337,
+          2367
+        ]
+      },
+      "token": 935
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2361,
+          2370
+        ]
+      },
+      "token": 823
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2366,
+          2306
+        ]
+      },
+      "token": 445
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2379
+        ]
+      },
+      "token": 419
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2375
+        ]
+      },
+      "token": 187
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2381,
+          2398,
+          2375
+        ]
+      },
+      "token": 962
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2325
+        ]
+      },
+      "token": 906
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2349
+        ]
+      },
+      "token": 697
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2366
+        ]
+      },
+      "token": 303
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2376,
+          2306
+        ]
+      },
+      "token": 514
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2368
+        ]
+      },
+      "token": 349
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2325,
+          2379,
+          2306
+        ]
+      },
+      "token": 802
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2379,
+          2306
+        ]
+      },
+      "token": 808
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2366
+        ]
+      },
+      "token": 193
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2369
+        ]
+      },
+      "token": 328
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2305
+        ]
+      },
+      "token": 500
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2369,
+          2305
+        ]
+      },
+      "token": 463
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2366,
+          2306
+        ]
+      },
+      "token": 886
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2370,
+          2306
+        ]
+      },
+      "token": 537
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2342
+        ]
+      },
+      "token": 749
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2379,
+          2306
+        ]
+      },
+      "token": 181
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2379
+        ]
+      },
+      "token": 352
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2367
+        ]
+      },
+      "token": 494
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2380
+        ]
+      },
+      "token": 434
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2310,
+          2365,
+          2365
+        ]
+      },
+      "token": 674
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2380
+        ]
+      },
+      "token": 745
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2360,
+          2369
+        ]
+      },
+      "token": 921
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2366,
+          2305
+        ]
+      },
+      "token": 629
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2370,
+          2305
+        ]
+      },
+      "token": 743
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2306
+        ]
+      },
+      "token": 948
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2310,
+          2305
+        ]
+      },
+      "token": 244
+    },
+    {
+      "syllable": {
+        "Mono": 77
+      },
+      "token": 77
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2379
+        ]
+      },
+      "token": 175
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2361,
+          2375,
+          2306
+        ]
+      },
+      "token": 594
+    },
+    {
+      "syllable": {
+        "Mono": 2396
+      },
+      "token": 163
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2342,
+          2375
+        ]
+      },
+      "token": 473
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2361,
+          2368
+        ]
+      },
+      "token": 361
+    },
+    {
+      "syllable": {
+        "Mono": 19
+      },
+      "token": 19
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2364,
+          2376
+        ]
+      },
+      "token": 615
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2367
+        ]
+      },
+      "token": 460
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2379,
+          2306
+        ]
+      },
+      "token": 975
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2379,
+          2306
+        ]
+      },
+      "token": 200
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2331,
+          2379,
+          2306
+        ]
+      },
+      "token": 851
+    },
+    {
+      "syllable": {
+        "Mono": 74
+      },
+      "token": 74
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2379,
+          2306
+        ]
+      },
+      "token": 360
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2367
+        ]
+      },
+      "token": 522
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 544
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2366,
+          2305
+        ]
+      },
+      "token": 751
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2361
+        ]
+      },
+      "token": 824
+    },
+    {
+      "syllable": {
+        "Mono": 2404
+      },
+      "token": 582
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2366,
+          2306
+        ]
+      },
+      "token": 621
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2395,
+          2367
+        ]
+      },
+      "token": 597
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2352,
+          2379
+        ]
+      },
+      "token": 780
+    },
+    {
+      "syllable": {
+        "Mono": 2320
+      },
+      "token": 429
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2379,
+          2306
+        ]
+      },
+      "token": 426
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2348
+        ]
+      },
+      "token": 833
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2350,
+          2366
+        ]
+      },
+      "token": 900
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2326,
+          2368
+        ]
+      },
+      "token": 967
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2381,
+          2340
+        ]
+      },
+      "token": 532
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2375,
+          2306
+        ]
+      },
+      "token": 551
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2379,
+          2306
+        ]
+      },
+      "token": 572
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2370,
+          2305
+        ]
+      },
+      "token": 640
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2351,
+          2380
+        ]
+      },
+      "token": 530
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2380
+        ]
+      },
+      "token": 401
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2306
+        ]
+      },
+      "token": 535
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2366,
+          2305
+        ]
+      },
+      "token": 816
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2361
+        ]
+      },
+      "token": 701
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2357
+        ]
+      },
+      "token": 208
+    },
+    {
+      "syllable": {
+        "Mono": 51
+      },
+      "token": 51
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2306
+        ]
+      },
+      "token": 873
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2368
+        ]
+      },
+      "token": 896
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2343,
+          2366
+        ]
+      },
+      "token": 879
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2350
+        ]
+      },
+      "token": 617
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2366
+        ]
+      },
+      "token": 204
+    },
+    {
+      "syllable": {
+        "Mono": 2339
+      },
+      "token": 475
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2375
+        ]
+      },
+      "token": 169
+    },
+    {
+      "syllable": {
+        "Mono": 2309
+      },
+      "token": 276
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2379
+        ]
+      },
+      "token": 866
+    },
+    {
+      "syllable": {
+        "Mono": 66
+      },
+      "token": 66
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2352,
+          2369
+        ]
+      },
+      "token": 838
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2340,
+          2367
+        ]
+      },
+      "token": 957
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2340,
+          2367
+        ]
+      },
+      "token": 863
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2368
+        ]
+      },
+      "token": 888
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2379
+        ]
+      },
+      "token": 154
+    },
+    {
+      "syllable": {
+        "Mono": 2336
+      },
+      "token": 322
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2370,
+          2305
+        ]
+      },
+      "token": 353
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2364,
+          2379,
+          2306
+        ]
+      },
+      "token": 526
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2370
+        ]
+      },
+      "token": 718
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2348
+        ]
+      },
+      "token": 485
+    },
+    {
+      "syllable": {
+        "Mono": 2342
+      },
+      "token": 210
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2360
+        ]
+      },
+      "token": 442
+    },
+    {
+      "syllable": {
+        "Mono": 2310
+      },
+      "token": 141
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2381
+        ]
+      },
+      "token": 832
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2376
+        ]
+      },
+      "token": 820
+    },
+    {
+      "syllable": {
+        "Mono": 93
+      },
+      "token": 93
+    },
+    {
+      "syllable": {
+        "Mono": 89
+      },
+      "token": 89
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2327,
+          2367
+        ]
+      },
+      "token": 518
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2327,
+          2364,
+          2375
+        ]
+      },
+      "token": 609
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 258
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2381,
+          2348,
+          2379,
+          2306
+        ]
+      },
+      "token": 826
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2368
+        ]
+      },
+      "token": 440
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381
+        ]
+      },
+      "token": 800
+    },
+    {
+      "syllable": {
+        "Mono": 45
+      },
+      "token": 45
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2375
+        ]
+      },
+      "token": 506
+    },
+    {
+      "syllable": {
+        "Mono": 2343
+      },
+      "token": 354
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2341
+        ]
+      },
+      "token": 679
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2344
+        ]
+      },
+      "token": 692
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2368
+        ]
+      },
+      "token": 899
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2392
+        ]
+      },
+      "token": 707
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2376
+        ]
+      },
+      "token": 400
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2375,
+          2306
+        ]
+      },
+      "token": 581
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2369
+        ]
+      },
+      "token": 233
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342
+        ]
+      },
+      "token": 422
+    },
+    {
+      "syllable": {
+        "Mono": 1
+      },
+      "token": 1
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2376
+        ]
+      },
+      "token": 510
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2379,
+          2306
+        ]
+      },
+      "token": 720
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2325,
+          2364
+        ]
+      },
+      "token": 406
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2348,
+          2367
+        ]
+      },
+      "token": 240
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2375
+        ]
+      },
+      "token": 332
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2381,
+          2350
+        ]
+      },
+      "token": 616
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2369
+        ]
+      },
+      "token": 515
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2379
+        ]
+      },
+      "token": 627
+    },
+    {
+      "syllable": {
+        "Mono": 2395
+      },
+      "token": 213
+    },
+    {
+      "syllable": {
+        "Mono": 2311
+      },
+      "token": 214
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2381,
+          2352
+        ]
+      },
+      "token": 580
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2381,
+          2325,
+          2364,
+          2379
+        ]
+      },
+      "token": 563
+    },
+    {
+      "syllable": {
+        "Mono": 37
+      },
+      "token": 37
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2366
+        ]
+      },
+      "token": 531
+    },
+    {
+      "syllable": {
+        "Mono": 2393
+      },
+      "token": 224
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2350,
+          2368
+        ]
+      },
+      "token": 712
+    },
+    {
+      "syllable": {
+        "Mono": 70
+      },
+      "token": 70
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2379
+        ]
+      },
+      "token": 777
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2306
+        ]
+      },
+      "token": 424
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2361,
+          2379
+        ]
+      },
+      "token": 920
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2368
+        ]
+      },
+      "token": 357
+    },
+    {
+      "syllable": {
+        "Mono": 17
+      },
+      "token": 17
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2368
+        ]
+      },
+      "token": 259
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2368
+        ]
+      },
+      "token": 647
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2368,
+          2306
+        ]
+      },
+      "token": 389
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2366,
+          2305
+        ]
+      },
+      "token": 867
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2368
+        ]
+      },
+      "token": 231
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2369
+        ]
+      },
+      "token": 241
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2379,
+          2306
+        ]
+      },
+      "token": 297
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2394,
+          2379,
+          2306
+        ]
+      },
+      "token": 561
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2368
+        ]
+      },
+      "token": 646
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2397,
+          2366
+        ]
+      },
+      "token": 300
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2367,
+          2306
+        ]
+      },
+      "token": 348
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2366
+        ]
+      },
+      "token": 450
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2358
+        ]
+      },
+      "token": 675
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2371
+        ]
+      },
+      "token": 681
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2367
+        ]
+      },
+      "token": 704
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2366,
+          2305
+        ]
+      },
+      "token": 844
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2306
+        ]
+      },
+      "token": 149
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2398,
+          2379,
+          2306
+        ]
+      },
+      "token": 709
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2368
+        ]
+      },
+      "token": 256
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2366,
+          2305
+        ]
+      },
+      "token": 395
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2381,
+          2332,
+          2364,
+          2370
+        ]
+      },
+      "token": 936
+    },
+    {
+      "syllable": {
+        "Mono": 9
+      },
+      "token": 9
+    },
+    {
+      "syllable": {
+        "Mono": 91
+      },
+      "token": 91
+    },
+    {
+      "syllable": {
+        "Mono": 112
+      },
+      "token": 112
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2350,
+          2366,
+          2306
+        ]
+      },
+      "token": 505
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2350,
+          2368
+        ]
+      },
+      "token": 666
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2306
+        ]
+      },
+      "token": 821
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2395,
+          2366
+        ]
+      },
+      "token": 710
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2350,
+          2368
+        ]
+      },
+      "token": 883
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2305
+        ]
+      },
+      "token": 927
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2346,
+          2367,
+          2306
+        ]
+      },
+      "token": 831
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2366,
+          2305
+        ]
+      },
+      "token": 157
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2366
+        ]
+      },
+      "token": 315
+    },
+    {
+      "syllable": {
+        "Mono": 123
+      },
+      "token": 123
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2357,
+          2366
+        ]
+      },
+      "token": 571
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2369,
+          2306
+        ]
+      },
+      "token": 269
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2369
+        ]
+      },
+      "token": 196
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2375
+        ]
+      },
+      "token": 147
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2312,
+          2306
+        ]
+      },
+      "token": 364
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2368,
+          2305
+        ]
+      },
+      "token": 875
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2370,
+          2305
+        ]
+      },
+      "token": 140
+    },
+    {
+      "syllable": {
+        "Mono": 40
+      },
+      "token": 40
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2366,
+          2306
+        ]
+      },
+      "token": 487
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2366
+        ]
+      },
+      "token": 260
+    },
+    {
+      "syllable": {
+        "Mono": 2341
+      },
+      "token": 234
+    },
+    {
+      "syllable": {
+        "Mono": 12
+      },
+      "token": 12
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2379,
+          2306
+        ]
+      },
+      "token": 333
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2368
+        ]
+      },
+      "token": 496
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2326,
+          2364,
+          2367
+        ]
+      },
+      "token": 550
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381,
+          2336,
+          2368
+        ]
+      },
+      "token": 414
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2339,
+          2379
+        ]
+      },
+      "token": 880
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2367
+        ]
+      },
+      "token": 603
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2370,
+          2306
+        ]
+      },
+      "token": 956
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2375
+        ]
+      },
+      "token": 924
+    },
+    {
+      "syllable": {
+        "Mono": 2332
+      },
+      "token": 142
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2380
+        ]
+      },
+      "token": 858
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2379,
+          2306
+        ]
+      },
+      "token": 613
+    },
+    {
+      "syllable": {
+        "Mono": 2360
+      },
+      "token": 219
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2379,
+          2306
+        ]
+      },
+      "token": 781
+    },
+    {
+      "syllable": {
+        "Mono": 2333
+      },
+      "token": 248
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2366,
+          2306
+        ]
+      },
+      "token": 284
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2370
+        ]
+      },
+      "token": 456
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2367
+        ]
+      },
+      "token": 771
+    },
+    {
+      "syllable": {
+        "Mono": 18
+      },
+      "token": 18
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2361,
+          2375,
+          2306
+        ]
+      },
+      "token": 573
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2375,
+          2306
+        ]
+      },
+      "token": 958
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2369,
+          2306
+        ]
+      },
+      "token": 673
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2366,
+          2306
+        ]
+      },
+      "token": 504
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2380
+        ]
+      },
+      "token": 527
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2376
+        ]
+      },
+      "token": 327
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2369
+        ]
+      },
+      "token": 797
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2369
+        ]
+      },
+      "token": 465
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2380,
+          2306
+        ]
+      },
+      "token": 836
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2376
+        ]
+      },
+      "token": 841
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2366
+        ]
+      },
+      "token": 367
+    },
+    {
+      "syllable": {
+        "Mono": 2340
+      },
+      "token": 158
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2344,
+          2369
+        ]
+      },
+      "token": 845
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2305
+        ]
+      },
+      "token": 786
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2381,
+          2351
+        ]
+      },
+      "token": 678
+    },
+    {
+      "syllable": {
+        "Mono": 117
+      },
+      "token": 117
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2381,
+          2337,
+          2370
+        ]
+      },
+      "token": 846
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2375
+        ]
+      },
+      "token": 183
+    },
+    {
+      "syllable": {
+        "Mono": 124
+      },
+      "token": 124
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2376
+        ]
+      },
+      "token": 766
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2367
+        ]
+      },
+      "token": 272
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2376
+        ]
+      },
+      "token": 430
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2370
+        ]
+      },
+      "token": 608
+    },
+    {
+      "syllable": {
+        "Mono": 68
+      },
+      "token": 68
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2369
+        ]
+      },
+      "token": 774
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2375,
+          2306
+        ]
+      },
+      "token": 443
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381
+        ]
+      },
+      "token": 829
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2380
+        ]
+      },
+      "token": 790
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2330
+        ]
+      },
+      "token": 491
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2381,
+          2327,
+          2369
+        ]
+      },
+      "token": 825
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2380
+        ]
+      },
+      "token": 727
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2369,
+          2306
+        ]
+      },
+      "token": 714
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2306
+        ]
+      },
+      "token": 791
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2370
+        ]
+      },
+      "token": 186
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2379,
+          2306
+        ]
+      },
+      "token": 612
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2375,
+          2306
+        ]
+      },
+      "token": 289
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2393,
+          2366
+        ]
+      },
+      "token": 579
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2376
+        ]
+      },
+      "token": 394
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2364,
+          2367
+        ]
+      },
+      "token": 939
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2368
+        ]
+      },
+      "token": 587
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2336,
+          2306
+        ]
+      },
+      "token": 736
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2381,
+          2348,
+          2366
+        ]
+      },
+      "token": 693
+    },
+    {
+      "syllable": {
+        "Mono": 96
+      },
+      "token": 96
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2366,
+          2305
+        ]
+      },
+      "token": 772
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2348
+        ]
+      },
+      "token": 650
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2379,
+          2306
+        ]
+      },
+      "token": 713
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2379
+        ]
+      },
+      "token": 733
+    },
+    {
+      "syllable": {
+        "Mono": 16
+      },
+      "token": 16
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2366
+        ]
+      },
+      "token": 314
+    },
+    {
+      "syllable": {
+        "Mono": 10
+      },
+      "token": 10
+    },
+    {
+      "syllable": {
+        "Mono": 83
+      },
+      "token": 83
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2366
+        ]
+      },
+      "token": 255
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2340,
+          2367
+        ]
+      },
+      "token": 427
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2350,
+          2367,
+          2306
+        ]
+      },
+      "token": 281
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2332,
+          2367
+        ]
+      },
+      "token": 584
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2380,
+          2306
+        ]
+      },
+      "token": 795
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2381,
+          2395
+        ]
+      },
+      "token": 917
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2370
+        ]
+      },
+      "token": 715
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2319,
+          2305
+        ]
+      },
+      "token": 153
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2368
+        ]
+      },
+      "token": 323
+    },
+    {
+      "syllable": {
+        "Mono": 30
+      },
+      "token": 30
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2369
+        ]
+      },
+      "token": 254
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2375,
+          2306
+        ]
+      },
+      "token": 628
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2370,
+          2306
+        ]
+      },
+      "token": 632
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364
+        ]
+      },
+      "token": 351
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2375,
+          2306
+        ]
+      },
+      "token": 167
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2398,
+          2366
+        ]
+      },
+      "token": 908
+    },
+    {
+      "syllable": {
+        "Mono": 29
+      },
+      "token": 29
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2376
+        ]
+      },
+      "token": 588
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2325,
+          2366
+        ]
+      },
+      "token": 758
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 847
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2380
+        ]
+      },
+      "token": 484
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2375,
+          2306
+        ]
+      },
+      "token": 805
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2368,
+          2306
+        ]
+      },
+      "token": 383
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2369
+        ]
+      },
+      "token": 856
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2375,
+          2306
+        ]
+      },
+      "token": 686
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2350
+        ]
+      },
+      "token": 735
+    },
+    {
+      "syllable": {
+        "Mono": 28
+      },
+      "token": 28
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2396,
+          2375
+        ]
+      },
+      "token": 648
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364,
+          2367
+        ]
+      },
+      "token": 288
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2369,
+          2306
+        ]
+      },
+      "token": 375
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2367
+        ]
+      },
+      "token": 490
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2379,
+          2306
+        ]
+      },
+      "token": 590
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2350
+        ]
+      },
+      "token": 539
+    },
+    {
+      "syllable": {
+        "Mono": 88
+      },
+      "token": 88
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2369
+        ]
+      },
+      "token": 451
+    },
+    {
+      "syllable": {
+        "Mono": 47
+      },
+      "token": 47
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2366,
+          2305
+        ]
+      },
+      "token": 184
+    },
+    {
+      "syllable": {
+        "Mono": 95
+      },
+      "token": 95
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2375
+        ]
+      },
+      "token": 638
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2379
+        ]
+      },
+      "token": 622
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2379
+        ]
+      },
+      "token": 536
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2379,
+          2306
+        ]
+      },
+      "token": 716
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2375
+        ]
+      },
+      "token": 166
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2369
+        ]
+      },
+      "token": 413
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2370
+        ]
+      },
+      "token": 865
+    },
+    {
+      "syllable": {
+        "Mono": 31
+      },
+      "token": 31
+    },
+    {
+      "syllable": {
+        "Mono": 2314
+      },
+      "token": 840
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2350,
+          2379,
+          2306
+        ]
+      },
+      "token": 564
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2351,
+          2379,
+          2306
+        ]
+      },
+      "token": 165
+    },
+    {
+      "syllable": {
+        "Mono": 2398
+      },
+      "token": 271
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2367
+        ]
+      },
+      "token": 131
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2376
+        ]
+      },
+      "token": 146
+    },
+    {
+      "syllable": {
+        "Mono": 3
+      },
+      "token": 3
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2375,
+          2306
+        ]
+      },
+      "token": 637
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2325,
+          2369
+        ]
+      },
+      "token": 511
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2348,
+          2370
+        ]
+      },
+      "token": 654
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2349,
+          2366
+        ]
+      },
+      "token": 696
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2340,
+          2367
+        ]
+      },
+      "token": 803
+    },
+    {
+      "syllable": {
+        "Mono": 85
+      },
+      "token": 85
+    },
+    {
+      "syllable": {
+        "Mono": 94
+      },
+      "token": 94
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2367
+        ]
+      },
+      "token": 421
+    },
+    {
+      "syllable": {
+        "Mono": 111
+      },
+      "token": 111
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2394,
+          2367
+        ]
+      },
+      "token": 744
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2346,
+          2366,
+          2306
+        ]
+      },
+      "token": 915
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2377
+        ]
+      },
+      "token": 950
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2375
+        ]
+      },
+      "token": 238
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2367
+        ]
+      },
+      "token": 156
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2380
+        ]
+      },
+      "token": 215
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2350,
+          2375,
+          2306
+        ]
+      },
+      "token": 764
+    },
+    {
+      "syllable": {
+        "Mono": 113
+      },
+      "token": 113
+    },
+    {
+      "syllable": {
+        "Mono": 2312
+      },
+      "token": 178
+    },
+    {
+      "syllable": {
+        "Mono": 2358
+      },
+      "token": 138
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2379,
+          2306
+        ]
+      },
+      "token": 190
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2350,
+          2367
+        ]
+      },
+      "token": 919
+    },
+    {
+      "syllable": {
+        "Mono": 2349
+      },
+      "token": 306
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2368
+        ]
+      },
+      "token": 177
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2392,
+          2367
+        ]
+      },
+      "token": 884
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2375
+        ]
+      },
+      "token": 659
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2366
+        ]
+      },
+      "token": 230
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2367
+        ]
+      },
+      "token": 237
+    },
+    {
+      "syllable": {
+        "Mono": 2351
+      },
+      "token": 257
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2379,
+          2306
+        ]
+      },
+      "token": 552
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2306
+        ]
+      },
+      "token": 446
+    },
+    {
+      "syllable": {
+        "Mono": 5
+      },
+      "token": 5
+    },
+    {
+      "syllable": {
+        "Mono": 107
+      },
+      "token": 107
+    },
+    {
+      "syllable": {
+        "Mono": 2327
+      },
+      "token": 150
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2340
+        ]
+      },
+      "token": 405
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2369
+        ]
+      },
+      "token": 311
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2364,
+          2379,
+          2306
+        ]
+      },
+      "token": 541
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2330,
+          2379,
+          2306
+        ]
+      },
+      "token": 784
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2306
+        ]
+      },
+      "token": 402
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2368
+        ]
+      },
+      "token": 776
+    },
+    {
+      "syllable": {
+        "Mono": 2323
+      },
+      "token": 202
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2381,
+          2340,
+          2366
+        ]
+      },
+      "token": 910
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2379
+        ]
+      },
+      "token": 206
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2337,
+          2367,
+          2306
+        ]
+      },
+      "token": 855
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2381,
+          2327,
+          2375
+        ]
+      },
+      "token": 474
+    },
+    {
+      "syllable": {
+        "Mono": 63
+      },
+      "token": 63
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2364,
+          2366
+        ]
+      },
+      "token": 403
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2379,
+          2365
+        ]
+      },
+      "token": 889
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2366
+        ]
+      },
+      "token": 765
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2368
+        ]
+      },
+      "token": 339
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2350
+        ]
+      },
+      "token": 524
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2370,
+          2305
+        ]
+      },
+      "token": 566
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2364
+        ]
+      },
+      "token": 611
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2305
+        ]
+      },
+      "token": 698
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2370
+        ]
+      },
+      "token": 792
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2381,
+          2352,
+          2375
+        ]
+      },
+      "token": 868
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2360
+        ]
+      },
+      "token": 895
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2325,
+          2366
+        ]
+      },
+      "token": 793
+    },
+    {
+      "syllable": {
+        "Mono": 2394
+      },
+      "token": 273
+    },
+    {
+      "syllable": {
+        "Mono": 76
+      },
+      "token": 76
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2354
+        ]
+      },
+      "token": 586
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2352
+        ]
+      },
+      "token": 606
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2379,
+          2306
+        ]
+      },
+      "token": 665
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2367
+        ]
+      },
+      "token": 229
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2367
+        ]
+      },
+      "token": 217
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2392
+        ]
+      },
+      "token": 464
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2305
+        ]
+      },
+      "token": 662
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2370
+        ]
+      },
+      "token": 738
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2367
+        ]
+      },
+      "token": 285
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2344,
+          2370
+        ]
+      },
+      "token": 472
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2366,
+          2305
+        ]
+      },
+      "token": 189
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2330
+        ]
+      },
+      "token": 420
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2343,
+          2375
+        ]
+      },
+      "token": 685
+    },
+    {
+      "syllable": {
+        "Mono": 105
+      },
+      "token": 105
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2380
+        ]
+      },
+      "token": 299
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2376
+        ]
+      },
+      "token": 476
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2376
+        ]
+      },
+      "token": 804
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2375
+        ]
+      },
+      "token": 378
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2305
+        ]
+      },
+      "token": 668
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2367,
+          2306
+        ]
+      },
+      "token": 645
+    },
+    {
+      "syllable": {
+        "Mono": 27
+      },
+      "token": 27
+    },
+    {
+      "syllable": {
+        "Mono": 57
+      },
+      "token": 57
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381
+        ]
+      },
+      "token": 892
+    },
+    {
+      "syllable": {
+        "Mono": 43
+      },
+      "token": 43
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2368
+        ]
+      },
+      "token": 188
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2394,
+          2376
+        ]
+      },
+      "token": 691
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381
+        ]
+      },
+      "token": 830
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2381,
+          2334,
+          2366
+        ]
+      },
+      "token": 742
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2366
+        ]
+      },
+      "token": 216
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2326,
+          2375,
+          2306
+        ]
+      },
+      "token": 938
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2397,
+          2375
+        ]
+      },
+      "token": 726
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2305
+        ]
+      },
+      "token": 554
+    },
+    {
+      "syllable": {
+        "Mono": 2319
+      },
+      "token": 235
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2371
+        ]
+      },
+      "token": 633
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2342,
+          2379,
+          2306
+        ]
+      },
+      "token": 567
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2366,
+          2305
+        ]
+      },
+      "token": 656
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2375,
+          2306
+        ]
+      },
+      "token": 945
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2380
+        ]
+      },
+      "token": 350
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2367
+        ]
+      },
+      "token": 180
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2343,
+          2369
+        ]
+      },
+      "token": 317
+    },
+    {
+      "syllable": {
+        "Mono": 2357
+      },
+      "token": 270
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2325,
+          2366
+        ]
+      },
+      "token": 813
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2395,
+          2367
+        ]
+      },
+      "token": 728
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2381,
+          2352,
+          2366
+        ]
+      },
+      "token": 740
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 970
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2306
+        ]
+      },
+      "token": 960
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2381,
+          2330,
+          2366
+        ]
+      },
+      "token": 871
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2367,
+          2306
+        ]
+      },
+      "token": 705
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2342
+        ]
+      },
+      "token": 549
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2379,
+          2306
+        ]
+      },
+      "token": 575
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2376
+        ]
+      },
+      "token": 677
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2368
+        ]
+      },
+      "token": 763
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2342,
+          2367
+        ]
+      },
+      "token": 909
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2370,
+          2305
+        ]
+      },
+      "token": 672
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2326,
+          2368
+        ]
+      },
+      "token": 391
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2366
+        ]
+      },
+      "token": 249
+    },
+    {
+      "syllable": {
+        "Mono": 127
+      },
+      "token": 127
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2375,
+          2305
+        ]
+      },
+      "token": 817
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2376
+        ]
+      },
+      "token": 747
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2381,
+          2350,
+          2379,
+          2306
+        ]
+      },
+      "token": 688
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2381,
+          2331,
+          2366
+        ]
+      },
+      "token": 643
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2327,
+          2379,
+          2306
+        ]
+      },
+      "token": 968
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2366,
+          2305
+        ]
+      },
+      "token": 912
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2379,
+          2306
+        ]
+      },
+      "token": 538
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2364,
+          2368
+        ]
+      },
+      "token": 592
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2369
+        ]
+      },
+      "token": 341
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2306
+        ]
+      },
+      "token": 904
+    },
+    {
+      "syllable": {
+        "Mono": 2313
+      },
+      "token": 211
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2368,
+          2306
+        ]
+      },
+      "token": 343
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2306
+        ]
+      },
+      "token": 789
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2354
+        ]
+      },
+      "token": 916
+    },
+    {
+      "syllable": {
+        "Mono": 65
+      },
+      "token": 65
+    },
+    {
+      "syllable": {
+        "Mono": 2324
+      },
+      "token": 134
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2340,
+          2366
+        ]
+      },
+      "token": 387
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2380
+        ]
+      },
+      "token": 961
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2361,
+          2366
+        ]
+      },
+      "token": 159
+    },
+    {
+      "syllable": {
+        "Mono": 62
+      },
+      "token": 62
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2368
+        ]
+      },
+      "token": 174
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2379
+        ]
+      },
+      "token": 860
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2381,
+          2326,
+          2366
+        ]
+      },
+      "token": 447
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2395,
+          2381,
+          2348
+        ]
+      },
+      "token": 835
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2381,
+          2340
+        ]
+      },
+      "token": 746
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2394,
+          2366
+        ]
+      },
+      "token": 965
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2358,
+          2366
+        ]
+      },
+      "token": 850
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2381,
+          2360
+        ]
+      },
+      "token": 901
+    },
+    {
+      "syllable": {
+        "Mono": 4
+      },
+      "token": 4
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2368
+        ]
+      },
+      "token": 872
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2381,
+          2352
+        ]
+      },
+      "token": 877
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2331,
+          2370
+        ]
+      },
+      "token": 739
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2381,
+          2342
+        ]
+      },
+      "token": 320
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2366
+        ]
+      },
+      "token": 411
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2330,
+          2379
+        ]
+      },
+      "token": 732
+    },
+    {
+      "syllable": {
+        "Mono": 2331
+      },
+      "token": 173
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2370
+        ]
+      },
+      "token": 225
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2309,
+          2305
+        ]
+      },
+      "token": 331
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2375
+        ]
+      },
+      "token": 253
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2366,
+          2306
+        ]
+      },
+      "token": 534
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2327,
+          2375,
+          2306
+        ]
+      },
+      "token": 425
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2328,
+          2375
+        ]
+      },
+      "token": 660
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2375,
+          2306
+        ]
+      },
+      "token": 382
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2319,
+          2306
+        ]
+      },
+      "token": 533
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2313,
+          2306
+        ]
+      },
+      "token": 655
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2333,
+          2379
+        ]
+      },
+      "token": 755
+    },
+    {
+      "syllable": {
+        "Mono": 26
+      },
+      "token": 26
+    },
+    {
+      "syllable": {
+        "Mono": 75
+      },
+      "token": 75
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2367
+        ]
+      },
+      "token": 542
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2370
+        ]
+      },
+      "token": 371
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2370
+        ]
+      },
+      "token": 730
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2395
+        ]
+      },
+      "token": 265
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2376
+        ]
+      },
+      "token": 366
+    },
+    {
+      "syllable": {
+        "Mono": 97
+      },
+      "token": 97
+    },
+    {
+      "syllable": {
+        "Mono": 2361
+      },
+      "token": 132
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2366
+        ]
+      },
+      "token": 220
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2337,
+          2370
+        ]
+      },
+      "token": 498
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2348,
+          2366
+        ]
+      },
+      "token": 516
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2381,
+          2357,
+          2366
+        ]
+      },
+      "token": 773
+    },
+    {
+      "syllable": {
+        "Mono": 122
+      },
+      "token": 122
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2368
+        ]
+      },
+      "token": 168
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2323,
+          2305
+        ]
+      },
+      "token": 861
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2380
+        ]
+      },
+      "token": 862
+    },
+    {
+      "syllable": {
+        "Mono": 2325
+      },
+      "token": 164
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2368
+        ]
+      },
+      "token": 377
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2357,
+          2379
+        ]
+      },
+      "token": 247
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381,
+          2335,
+          2366
+        ]
+      },
+      "token": 918
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2366,
+          2306
+        ]
+      },
+      "token": 639
+    },
+    {
+      "syllable": {
+        "Mono": 54
+      },
+      "token": 54
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2341,
+          2368
+        ]
+      },
+      "token": 232
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2381,
+          2336,
+          2375
+        ]
+      },
+      "token": 569
+    },
+    {
+      "syllable": {
+        "Mono": 32
+      },
+      "token": 32
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2344,
+          2368
+        ]
+      },
+      "token": 362
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2375
+        ]
+      },
+      "token": 489
+    },
+    {
+      "syllable": {
+        "Mono": 11
+      },
+      "token": 11
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2360,
+          2375
+        ]
+      },
+      "token": 292
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2306
+        ]
+      },
+      "token": 441
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 680
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2375
+        ]
+      },
+      "token": 145
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2381,
+          2360,
+          2366
+        ]
+      },
+      "token": 932
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2357,
+          2379,
+          2306
+        ]
+      },
+      "token": 810
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2350,
+          2366
+        ]
+      },
+      "token": 358
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2381,
+          2398
+        ]
+      },
+      "token": 301
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2361,
+          2366,
+          2305
+        ]
+      },
+      "token": 316
+    },
+    {
+      "syllable": {
+        "Mono": 21
+      },
+      "token": 21
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2380
+        ]
+      },
+      "token": 857
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2393,
+          2381,
+          2357,
+          2366
+        ]
+      },
+      "token": 519
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2370
+        ]
+      },
+      "token": 454
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2351,
+          2369
+        ]
+      },
+      "token": 652
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2379
+        ]
+      },
+      "token": 182
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2368
+        ]
+      },
+      "token": 148
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2354,
+          2381,
+          2398,
+          2375,
+          2306
+        ]
+      },
+      "token": 768
+    },
+    {
+      "syllable": {
+        "Mono": 80
+      },
+      "token": 80
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2360,
+          2369
+        ]
+      },
+      "token": 293
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2348,
+          2369
+        ]
+      },
+      "token": 694
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2364,
+          2369
+        ]
+      },
+      "token": 905
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364,
+          2369
+        ]
+      },
+      "token": 894
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2398,
+          2379,
+          2306
+        ]
+      },
+      "token": 941
+    },
+    {
+      "syllable": {
+        "Mono": 99
+      },
+      "token": 99
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2368
+        ]
+      },
+      "token": 335
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2346,
+          2367
+        ]
+      },
+      "token": 461
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2352,
+          2370,
+          2305
+        ]
+      },
+      "token": 373
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2340,
+          2381,
+          2341,
+          2375
+        ]
+      },
+      "token": 488
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2392,
+          2368
+        ]
+      },
+      "token": 661
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2342,
+          2368
+        ]
+      },
+      "token": 203
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2381,
+          2325,
+          2367
+        ]
+      },
+      "token": 687
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2335,
+          2369
+        ]
+      },
+      "token": 890
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2364
+        ]
+      },
+      "token": 557
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2367
+        ]
+      },
+      "token": 307
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2347,
+          2364
+        ]
+      },
+      "token": 428
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2349,
+          2367
+        ]
+      },
+      "token": 756
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2358,
+          2368
+        ]
+      },
+      "token": 342
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2348,
+          2306
+        ]
+      },
+      "token": 294
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2381,
+          2342,
+          2369
+        ]
+      },
+      "token": 785
+    },
+    {
+      "syllable": {
+        "Mono": 109
+      },
+      "token": 109
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2332,
+          2381,
+          2351,
+          2366
+        ]
+      },
+      "token": 903
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2326,
+          2364,
+          2376
+        ]
+      },
+      "token": 547
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2338,
+          2364,
+          2366
+        ]
+      },
+      "token": 291
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2344,
+          2367
+        ]
+      },
+      "token": 384
+    },
+    {
+      "syllable": {
+        "Multi": [
+          2325,
+          2364
+        ]
+      },
+      "token": 279
+    }
+  ],
+  "maximum": 976
+}
