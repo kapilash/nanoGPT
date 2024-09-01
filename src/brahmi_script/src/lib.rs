@@ -294,6 +294,32 @@ impl Config {
         }
     }
 
+    fn new_tamil() -> Self {
+        let independent_vowels = vec![0xB85, 0xB86, 0xB87, 0xB88, 0xB89, 0xB8A, 0xB8E, 0xB8F, 0xB90, 0xB92, 0xB93, 0xB94];
+        let consonants = vec![0xB95, 0xB99, 0xB9A, 0xB9C, 0xB9E, 0xB9F, 0xBA3, 0xBA4, 0xBA8, 0xBA9, 0xBAA, 0xBAE, 0xBAF, 0xBB0, 0xBB1, 0xBB2, 0xBB3, 0xBB4, 0xBB5, 0xBB6, 0xBB7, 0xBB8, 0xBB9];
+        let vowel_suffixes = vec![0xB82, 0xB83];
+        let vowel_signs = vec![0xBBE, 0xBBF, 0xBC0, 0xBC1, 0xBC2, 0xBC6, 0xBC7, 0xBC8, 0xBCA, 0xBCB, 0xBCC];
+        let virama = 0xBCD;
+        let reserved = vec![0xB80, 0xB81, 0xB84, 0xB8B, 0xB8C, 0xB8D, 0xB91, 0xB95, 0xB96, 0xB97, 0xB98, 0xB9B, 0xB9D, 0xBA0, 0xBA1, 0xBA2, 0xBA5, 0xBA6, 0xBA7, 0xBAB, 0xBAC, 0xBAD,  0xBBA,  0xBBB, 0xBBC, 0xBBD, 0xBC3, 0xBC4, 0xBC5, 0xBC9, 0xBCE, 0xBCF, 0xBD1, 0xBD2,0xBD3,0xBD4, 0xBD5, 0xBD6, 0xBD8,0xBD9, 0xBDA, 0xBDB, 0xBDC, 0xBDD, 0xBDE, 0xBDF, 0xBE0,0xBE1,0xBE2, 0xBE3, 0xBE4, 0xBE5, 0xBFB, 0xBFC, 0xBFD, 0xBFE, 0xBFF];
+        let ignored = vec![0xBF0, 0xBF1, 0xBF2, 0xBF3, 0xBF4, 0xBF5, 0xBF6, 0xBF7, 0xBF8, 0xBF9, 0xBFA];
+        let digits = vec![0xBE6, 0xBE7, 0xBE8, 0xBE9, 0xBEA, 0xBEB, 0xBEC, 0xBED, 0xBEE, 0xBEF];
+        let end_of_text = vec![0xB83];
+        let unknown = 0xBFF;
+
+        Config {
+            independent_vowels,
+            consonants,
+            vowel_suffixes,
+            vowel_signs,
+            reserved,
+            ignored,
+            digits,
+            virama,
+            end_of_text,
+            unknown,
+        }
+    }
+
     /// Converts a unicode character to a SymbolInfo instance.
     pub fn to_symbol_info(&self, c:u32) -> SymbolInfo {
         if self.is_vowel_suffix(c) {
@@ -311,16 +337,15 @@ impl Config {
         if self.is_virama(c) {
             return SymbolInfo::Virama(c);
         }
-        if self.is_ignored(c) {
-            for res in self.reserved.iter() {
-                if c == *res {
-                    return SymbolInfo::Ignored(c);
-                }
+        for res in self.reserved.iter() {
+            if c == *res {
+                return SymbolInfo::Ignored(c);
             }
-            for ig in self.ignored.iter() {
-                if c == *ig {
-                    return SymbolInfo::Ignored(c);
-                }
+        }
+
+        for ig in self.ignored.iter() {
+            if c == *ig {
+                return SymbolInfo::Ignored(c);
             }
         }
 
@@ -907,6 +932,105 @@ mod hindi_tests{
         assert_eq!(test_word, round_trip);
     }
 }
+
+#[cfg(test)]
+mod tamil_tests{
+    use super::*;
+
+    #[test]
+    fn tamil() {
+        let test_word = "தமிழ்";
+        let config = Config::new_tamil();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(3, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn moliyil() {
+        let test_word = "மொழியில்";
+        let config = Config::new_tamil();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(4, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+
+    #[test]
+    fn maanitha_utalin() {
+        let test_word = "மனித உடலின்";
+        let config = Config::new_tamil();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(8, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn eluttukal() {
+        let test_word = "எழுத்துகள்";
+        let config = Config::new_tamil();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(5, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+    #[test]
+    fn nurrantalavil() {
+        let test_word = " நூற்றாண்டளவில்";
+        let config = Config::new_tamil();
+        let mut converter = Converter::new();
+        for chr in test_word.chars() {
+            let c:u32 = chr.into(); 
+            let symbol_info = config.to_symbol_info(c);
+            converter.add_code_point(&symbol_info, config.virama()).unwrap();
+        }
+        assert!(converter.finish(config.virama()));
+        let mut round_trip = String::new();
+        for s in converter.syllables.iter() {
+            s.append_char(&mut round_trip, &config);
+        }
+        assert_eq!(7, converter.syllables.len());
+        assert_eq!(test_word, round_trip);
+    }
+}
+
 #[pyclass]
 struct Tokenizer{
     syllabary : SyllableMapping,
@@ -925,6 +1049,12 @@ impl Tokenizer {
         let syllabary = SyllableMappingFile::read_from_file(&vocab_file).unwrap().to_syllable_mapping(&config);
         Tokenizer { syllabary, config }
     }
+
+    fn new_tamil(vocab_file:String) -> Self {
+        let config = Config::new_tamil();
+        let syllabary = SyllableMappingFile::read_from_file(&vocab_file).unwrap().to_syllable_mapping(&config);
+        Tokenizer { syllabary, config }
+    }
 }
 /// Performs Tokenization for telugu texts written in Brahmi Script.
 /// It relies on telugu vocabulary json file.
@@ -935,6 +1065,7 @@ impl Tokenizer {
         match script_name.as_str() {
             "telugu" => Tokenizer::new_telugu(vocab_file),
             "devnagari" => Tokenizer::new_devnagari(vocab_file),
+            "tamil" => Tokenizer::new_tamil(vocab_file),
             _ => panic!("Unknown script {}", script_name),
         }
     }
