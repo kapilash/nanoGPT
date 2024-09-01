@@ -5,7 +5,7 @@ The tokenizer does tokenization according to the Telugu script (in other words, 
 Will save train.bin, val.bin containing the ids, and meta.pkl containing the
 info related to the vocabulary size.
 """
-import brahmi_lipi
+import brahmi_script
 import os
 import pickle
 import requests
@@ -18,7 +18,7 @@ def append_to_torch(tokenizer, file_path, tensor):
     file_size = os.path.getsize(file_path)
     encoded = tokenizer.encode_file(file_path)
     for e in encoded :
-        if e >= 10337 :
+        if e >= 15651 :
             print("Found ", e)
     decoded = tokenizer.decode(encoded)
     with open(file_path, 'r') as fd:
@@ -54,19 +54,19 @@ def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
 if __name__ == "__main__":
     args = sys.argv[1:]
     directory = args[0]
-    tokenizer = brahmi_lipi.TeluguTokenizer("smf.json")
+    tokenizer = brahmi_script.Tokenizer("telugu", "smf.json")
     tensor = torch.tensor([], dtype=torch.int16)
     visited = {}
-    training_size = 110000
+    training_size = 1100000
     wiki_encdec_dir(tokenizer, directory, tensor, training_size, visited, "train.bin")
     print("Training data saved to train.bin")
     tensor = torch.tensor([], dtype=torch.int16)
-    validation_size = 11000
+    validation_size = 110000
     wiki_encdec_dir(tokenizer, directory, tensor, validation_size, visited, "val.bin")
     meta = {
-        'vocab_size': 10337,
-        'itos': "brahmi_lipi.TeluguTokenizer",
-        'stoi': "brahmi_lipi.TeluguTokenizer",
+        'vocab_size': 15651,
+        'itos': "brahmi_script.Tokenizer",
+        'stoi': "brahmi_script.Tokenizer",
     }
     with open(os.path.join(os.path.dirname(__file__), 'meta.pkl'), 'wb') as f:
         pickle.dump(meta, f)

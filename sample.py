@@ -5,7 +5,7 @@ import os
 import pickle
 from contextlib import nullcontext
 import torch
-import brahmi_lipi
+import brahmi_script
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
@@ -63,13 +63,13 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer = brahmi_lipi.TeluguTokenizer("smf.json")
+    tokenizer = brahmi_script.Tokenizer("telugu", "smf.json")
     encode = lambda s: tokenizer.encode(s)
     decode = lambda l: tokenizer.decode(l)
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = brahmi_lisp.TeluguTokenizer("smf.json")
+    enc = brahmi_script.Tokenizer("telugu", "smf.json")
     encode = lambda s: enc.encode(s)
     decode = lambda l: enc.decode(l)
 
