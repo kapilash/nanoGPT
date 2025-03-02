@@ -17,7 +17,7 @@ def append_to_torch(tokenizer, file_path, tensor):
     file_size = os.path.getsize(file_path)
     text = open(file_path, 'r').read()
     encoded = tokenizer.encode(text, out_type=int)
-    return torch.cat((tensor, torch.tensor(encoded, dtype=torch.int32))) 
+    return torch.cat((tensor, torch.tensor(encoded, dtype=torch.int16))) 
 
 # recursively go through a directory and encode files till the tensor size reaches target_size
 def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
@@ -54,7 +54,7 @@ if __name__ == "__main__":
     validation_size = 110000
     wiki_encdec_dir(tokenizer, directory, tensor, validation_size, visited, "val.bin")
     meta = {
-        'vocab_size': 15651,
+        'vocab_size': len(tokenizer),
         'itos': "sentencepiece.Tokenizer",
         'stoi': "sentencepiece.Tokenizer",
     }
