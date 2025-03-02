@@ -5,7 +5,7 @@ import os
 import pickle
 from contextlib import nullcontext
 import torch
-import sentencepiece as spm
+import brahmi_script
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
@@ -63,14 +63,14 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer =  spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/telunigram.model')
-    encode = lambda s: tokenizer.encode(s, out_type=int)
+    tokenizer = brahmi_script.Tokenizer("telugu", "telugu.json")
+    encode = lambda s: tokenizer.encode(s)
     decode = lambda l: tokenizer.decode(l)
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/telunigram.model')
-    encode = lambda s: enc.encode(s, out_type=int)
+    enc = brahmi_script.Tokenizer("telugu", "telugu.json")
+    encode = lambda s: enc.encode(s)
     decode = lambda l: enc.decode(l)
 
 # encode the beginning of the prompt

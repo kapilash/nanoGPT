@@ -63,13 +63,13 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer = brahmi_script.Tokenizer("telugu", "smf.json")
+    tokenizer = brahmi_script.Tokenizer("tamil", "smf.json")
     encode = lambda s: tokenizer.encode(s)
     decode = lambda l: tokenizer.decode(l)
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = brahmi_script.Tokenizer("telugu", "smf.json")
+    enc = brahmi_script.Tokenizer("tamil", "smf.json")
     encode = lambda s: enc.encode(s)
     decode = lambda l: enc.decode(l)
 
@@ -86,4 +86,7 @@ with torch.no_grad():
         for k in range(num_samples):
             y = model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
             print(decode(y[0].tolist()))
+            print("######################ENCODED###############")
+            print(y[0].to_list())
+            print("############################################")
             print('---------------')
