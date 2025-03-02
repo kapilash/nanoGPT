@@ -1,10 +1,11 @@
 """
 Prepare the Telugu dataset for character level language modeling.
-So instead of encoding with GPT-2 BPE tokens, we use sentence piece unigram tokenizer. This has a vocabulary size of 15651.
+So instead of encoding with GPT-2 BPE tokens, we use brahmi_lip tokenizer to encode the text into characters.
+The tokenizer does tokenization according to the Telugu script (in other words, it tokenizes the text based on sounds).
 Will save train.bin, val.bin containing the ids, and meta.pkl containing the
 info related to the vocabulary size.
 """
-import sentencepiece as spm
+import brahmi_script
 import os
 import pickle
 import requests
@@ -15,9 +16,18 @@ import torch
 # encode a text and append the result to a torch tensor
 def append_to_torch(tokenizer, file_path, tensor):
     file_size = os.path.getsize(file_path)
-    text = open(file_path, 'r').read()
-    encoded = tokenizer.encode(text, out_type=int)
-    return torch.cat((tensor, torch.tensor(encoded, dtype=torch.int16))) 
+    encoded = tokenizer.encode_file(file_path)
+    for e in encoded :
+        if e >= 11877 :
+            print("Found ", e)
+    decoded = tokenizer.decode(encoded)
+    with open(file_path, 'r', encoding='utf-8') as fd:
+        file_text = fd.read()
+        if file_text != decoded[1:]:
+            #print("Mismatch:",file_path)
+            return tensor
+        #print("Match   :",file_path)
+        return torch.cat((tensor, torch.tensor(encoded, dtype=torch.int16))) 
 
 # recursively go through a directory and encode files till the tensor size reaches target_size
 def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
@@ -44,7 +54,7 @@ def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
 if __name__ == "__main__":
     args = sys.argv[1:]
     directory = args[0]
-    tokenizer = spm.SentencePieceProcessor(model_file='../../vocab_models/sentencepiece/tamunigram.model')
+    tokenizer = brahmi_script.Tokenizer("tamil", "smf.json")
     tensor = torch.tensor([], dtype=torch.int16)
     visited = {}
     training_size = 1100000
@@ -54,9 +64,9 @@ if __name__ == "__main__":
     validation_size = 110000
     wiki_encdec_dir(tokenizer, directory, tensor, validation_size, visited, "val.bin")
     meta = {
-        'vocab_size': len(tokenizer),
-        'itos': "sentencepiece.Tokenizer",
-        'stoi': "sentencepiece.Tokenizer",
+        'vocab_size': 11877,
+        'itos': "brahmi_script.Tokenizer",
+        'stoi': "brahmi_script.Tokenizer",
     }
     with open(os.path.join(os.path.dirname(__file__), 'meta.pkl'), 'wb') as f:
         pickle.dump(meta, f)
