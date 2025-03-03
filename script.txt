@@ -1,0 +1,21 @@
+install rust
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+git clone https://github.com/kapilash/nanoGPT.git
+
+git checkout kapilash/telugu
+
+pip install maturin
+
+
+pip install sentencepiece
+
+pip install tiktoken
+
+
+conda init
+
+conda activate (should automatically happen on relogin)
+
+copy 
