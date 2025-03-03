@@ -207,7 +207,7 @@ if compile:
     unoptimized_model = model
     for naam, paaram in model.named_parameters():
         if paaram.requires_grad:
-            print naam, paaram.data
+            print (naam, paaram.data)
     model = torch.compile(model) # requires PyTorch 2.0
 
 # wrap model into DDP container
