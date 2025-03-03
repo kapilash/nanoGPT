@@ -5,7 +5,7 @@ import os
 import pickle
 from contextlib import nullcontext
 import torch
-import brahmi_script
+import tiktoken
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
@@ -63,14 +63,14 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer = brahmi_script.Tokenizer("tamil", "smf.json")
-    encode = lambda s: tokenizer.encode(s)
-    decode = lambda l: tokenizer.decode(l)
+    stoi, itos = meta['stoi'], meta['itos']
+    encode = lambda s: [stoi[c] for c in s]
+    decode = lambda l: ''.join([itos[i] for i in l])
 else:
     # ok let's assume gpt-2 encodings by default
     print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = brahmi_script.Tokenizer("tamil", "smf.json")
-    encode = lambda s: enc.encode(s)
+    enc = tiktoken.get_encoding("gpt2")
+    encode = lambda s: enc.encode(s, allowed_special={"<|endoftext|>"})
     decode = lambda l: enc.decode(l)
 
 # encode the beginning of the prompt
@@ -86,7 +86,4 @@ with torch.no_grad():
         for k in range(num_samples):
             y = model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
             print(decode(y[0].tolist()))
-            print("######################ENCODED###############")
-            print(y[0].to_list())
-            print("############################################")
             print('---------------')
