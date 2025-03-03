@@ -14,10 +14,11 @@ import torch
 
 # encode a text and append the result to a torch tensor
 def append_to_torch(tokenizer, file_path, tensor):
-    file_size = os.path.getsize(file_path)
     text = open(file_path, 'r').read()
-    encoded = tokenizer.encode(text, out_type=int)
-    return torch.cat((tensor, torch.tensor(encoded, dtype=torch.int16))) 
+    with open(file_path, 'r') as fd:
+        file_text = fd.read()
+        encoded = tokenizer.encode(file_text, out_type=int)
+        return torch.cat((tensor, torch.tensor(encoded, dtype=torch.int16))) 
 
 # recursively go through a directory and encode files till the tensor size reaches target_size
 def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
@@ -33,6 +34,8 @@ def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
             new_tensor = append_to_torch(tokenizer, file, tensor)
             if len(new_tensor) > target_size:
                 train_ids = new_tensor.numpy(force=True)
+                print("new tensor size: ", new_tensor.size())
+                print("new tensor", new_tensor)
                 train_ids.tofile(os.path.join(os.path.dirname(__file__), name))
                 return 
             else:

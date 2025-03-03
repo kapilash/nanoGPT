@@ -205,6 +205,9 @@ checkpoint = None # free up memory
 if compile:
     print("compiling the model... (takes a ~minute)")
     unoptimized_model = model
+    for naam, paaram in model.named_parameters():
+        if paaram.requires_grad:
+            print naam, paaram.data
     model = torch.compile(model) # requires PyTorch 2.0
 
 # wrap model into DDP container

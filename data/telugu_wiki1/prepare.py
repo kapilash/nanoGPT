@@ -43,6 +43,8 @@ def wiki_encdec_dir(tokenizer, directory, tensor, target_size, visited, name):
             new_tensor = append_to_torch(tokenizer, file, tensor)
             if len(new_tensor) > target_size:
                 train_ids = new_tensor.numpy(force=True)
+                print("new tensor size: ", new_tensor.size())
+                print("new tensor", new_tensor)
                 train_ids.tofile(os.path.join(os.path.dirname(__file__), name))
                 return 
             else:
