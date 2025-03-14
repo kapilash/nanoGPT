@@ -121,7 +121,7 @@ impl SyllableMapping {
         }
         syllable_token.insert(Syllable::Meta(config.unknown), 128);
         token_syllable.push(Syllable::Meta(config.unknown));
-        let mut i = 129;
+        let mut i = 129; 
         for c in config.end_of_text.iter() {
             syllable_token.insert(Syllable::Meta(*c), i);
             token_syllable.push(Syllable::Meta(*c));
@@ -1057,7 +1057,7 @@ impl Tokenizer {
     }
 }
 /// Performs Tokenization for telugu texts written in Brahmi Script.
-/// It relies on telugu vocabulary json file.
+/// It relies on telugu vocabulary json file.en
 #[pymethods]
 impl Tokenizer {
     #[new]
@@ -1077,6 +1077,38 @@ impl Tokenizer {
 
     fn decode(&self, encoded:Vec<u32>) -> String {
         decode_contents(&encoded, &self.syllabary, &self.config)
+    }
+
+    fn transform_encode(&self, text:String) -> String {
+        let contents = text.chars().map(|c| c as u32).collect::<Vec<u32>>();
+        let encoded = encode_contents(&contents, &self.syllabary, &self.config, false);
+        let mut text = String::new();
+        for token in encoded.iter() { 
+            if *token < 129 {
+                text.push(std::char::from_u32(*token).unwrap());
+                continue;
+            }
+            let c = std::char::from_u32(*token + 0x4E00).unwrap();// Using the first CJK character as the start of the range
+            text.push(c);
+        }
+        text
+    }
+
+    fn transform_decode(&self, text:String) -> String {
+        let contents = text.chars().map(|c| c as u32).collect::<Vec<u32>>();
+        let mut decoded = Vec::new();
+        for token in contents.iter() {
+            if *token < 0x4E00 {
+                if *token >= 129 {
+                    panic!("Invalid token {} in transform_decode", *token);
+                }
+                decoded.push(*token);
+                continue;
+            }
+            let c = std::char::from_u32(*token - 0x4E00).unwrap();
+            decoded.push(c as u32);
+        }
+        decode_contents(&decoded, &self.syllabary, &self.config)
     }
 
     fn encode_file(&self, input_file:String) -> PyResult<Vec<u32>> {
