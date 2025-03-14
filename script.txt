@@ -6,7 +6,7 @@ git clone https://github.com/kapilash/nanoGPT.git
 
 git checkout kapilash/telugu
 
-pip install maturin
+pip install maturin sentencepiece tiktoken
 
 
 pip install sentencepiece
