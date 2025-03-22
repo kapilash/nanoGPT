@@ -42,6 +42,7 @@ if init_from == 'resume':
     state_dict = checkpoint['model']
     unwanted_prefix = '_orig_mod.'
     for k,v in list(state_dict.items()):
+        #print("state dic", k, v.shape)
         if k.startswith(unwanted_prefix):
             state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)
     model.load_state_dict(state_dict)
@@ -64,15 +65,17 @@ if load_meta:
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
     # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer =  spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/telunigram.model')
-    encode = lambda s: tokenizer.encode(s, out_type=int)
-    decode = lambda l: tokenizer.decode(l)
+    tokenizer =  spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/telunigramt.model')
+    bt = brahmi_script.Tokenizer("telugu", "smf.json")
+    encode = lambda s: tokenizer.encode(bt.transform_encode(s), out_type=int)
+    decode = lambda l: bt.transform_decode(tokenizer.decode(l))
 else:
     # ok let's assume gpt-2 encodings by default
-    print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/telunigram.model')
-    encode = lambda s: enc.encode(s, out_type=int)
-    decode = lambda l: enc.decode(l)
+    #print("No meta.pkl found, assuming GPT-2 encodings...")
+    enc = spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/telunigramt.model')
+    bt = brahmi_script.Tokenizer("telugu", "smf.json")
+    encode = lambda s: enc.encode(bt.transform_encode(s), out_type=int)
+    decode = lambda l: bt.transform_decode(enc.decode(l))
 
 # encode the beginning of the prompt
 if start.startswith('FILE:'):
