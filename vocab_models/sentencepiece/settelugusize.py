@@ -8,8 +8,8 @@ target_uni_model = 'telunigram.model'
 target_uni_vocab = 'telunigram.vocab'
 
 def copy_bpe_files(size):
-    model_format = 'bpe-{}00.model'
-    vocab_format = 'bpe-{}00.vocab'
+    model_format = 'bpe-{}000.model'
+    vocab_format = 'bpe-{}000.vocab'
     model_file = model_format.format(size)
     vocab_file = vocab_format.format(size)
     os.copyfile(model_file, target_bpe_model)
@@ -17,8 +17,8 @@ def copy_bpe_files(size):
     return model_file, vocab_file
 
 def copy_unigram_files(size):
-    model_format = 'uni-{}00.model'
-    vocab_format = 'uni-{}00.vocab'
+    model_format = 'uni-{}000.model'
+    vocab_format = 'uni-{}000.vocab'
     model_file = model_format.format(size)
     vocab_file = vocab_format.format(size)
     os.copyfile(model_file, target_uni_model)
