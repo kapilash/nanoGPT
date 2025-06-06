@@ -7,11 +7,12 @@ from contextlib import nullcontext
 import torch
 import sentencepiece as spm
 from model import GPTConfig, GPT
+import brahmi_script
 
 # -----------------------------------------------------------------------------
 init_from = 'resume' # either 'resume' (from an out_dir) or a gpt2 variant (e.g. 'gpt2-xl')
 out_dir = 'out' # ignored if init_from is not 'resume'
-start = "\n" # or "<|endoftext|>" or etc. Can also specify a file, use as: "FILE:prompt.txt"
+start = "அறிவியல்" # or "<|endoftext|>" or etc. Can also specify a file, use as: "FILE:prompt.txt"
 num_samples = 10 # number of samples to draw
 max_new_tokens = 500 # number of tokens generated in each sample
 temperature = 0.8 # 1.0 = no change, < 1.0 = less random, > 1.0 = more random, in predictions
@@ -20,6 +21,8 @@ seed = 1337
 device = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1', etc.
 dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32' or 'bfloat16' or 'float16'
 compile = False # use PyTorch 2.0 to compile the model to be faster
+spm_model = 'replace_here'
+pretok = False
 exec(open('configurator.py').read()) # overrides from command line or config file
 # -----------------------------------------------------------------------------
 
@@ -58,26 +61,37 @@ load_meta = False
 if init_from == 'resume' and 'config' in checkpoint and 'dataset' in checkpoint['config']: # older checkpoints might not have these...
     meta_path = os.path.join('data', checkpoint['config']['dataset'], 'meta.pkl')
     load_meta = os.path.exists(meta_path)
+
+if pretok:
+    brahmi_tokenizer = brahmi_script.Tokenizer("tamil", "tamil.json")
+    tokenizer =  spm.SentencePieceProcessor(model_file=spm_model)
+
+    def encode(s):
+        transformed_text = brahmi_tokenizer.transform_encode(s)
+        return tokenizer.encode(transformed_text, out_type=int)
+
+    def decode(l):
+        decoded_text = tokenizer.decode(l)
+        return brahmi_tokenizer.transform_decode(decoded_text)
+else:
+    tokenizer =  spm.SentencePieceProcessor(model_file=spm_model)
+    encode = lambda s: tokenizer.encode(s, out_type=int)
+    decode = lambda l: tokenizer.decode(l)
+
 if load_meta:
     print(f"Loading meta from {meta_path}...")
     with open(meta_path, 'rb') as f:
         meta = pickle.load(f)
-    # TODO want to make this more general to arbitrary encoder/decoder schemes
-    tokenizer =  spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/tambpe.model')
-    encode = lambda s: tokenizer.encode(s, out_type=int)
-    decode = lambda l: tokenizer.decode(l)
 else:
-    # ok let's assume gpt-2 encodings by default
-    print("No meta.pkl found, assuming GPT-2 encodings...")
-    enc = spm.SentencePieceProcessor(model_file='vocab_models/sentencepiece/tambpe.model')
-    encode = lambda s: enc.encode(s, out_type=int)
-    decode = lambda l: enc.decode(l)
+    pass
 
 # encode the beginning of the prompt
 if start.startswith('FILE:'):
     with open(start[5:], 'r', encoding='utf-8') as f:
         start = f.read()
 start_ids = encode(start)
+if len(start_ids) == 0:
+    raise ValueError(f"Prompt {start} is empty after encoding")
 x = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])
 
 # run generation
