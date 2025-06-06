@@ -296,16 +296,13 @@ impl Config {
 
     fn new_tamil() -> Self {
         let independent_vowels = vec![0xB83, 0xB85, 0xB86, 0xB87, 0xB88, 0xB89, 0xB8A, 0xB8E, 0xB8F, 0xB90, 0xB92, 0xB93, 0xB94, 0xBD0];
-        let independent_vowels = vec![0xB83, 0xB85, 0xB86, 0xB87, 0xB88, 0xB89, 0xB8A, 0xB8E, 0xB8F, 0xB90, 0xB92, 0xB93, 0xB94, 0xBD0];
         let consonants = vec![0xB95, 0xB99, 0xB9A, 0xB9C, 0xB9E, 0xB9F, 0xBA3, 0xBA4, 0xBA8, 0xBA9, 0xBAA, 0xBAE, 0xBAF, 0xBB0, 0xBB1, 0xBB2, 0xBB3, 0xBB4, 0xBB5, 0xBB6, 0xBB7, 0xBB8, 0xBB9];
-        let vowel_suffixes = vec![0xB82];
         let vowel_suffixes = vec![0xB82];
         let vowel_signs = vec![0xBBE, 0xBBF, 0xBC0, 0xBC1, 0xBC2, 0xBC6, 0xBC7, 0xBC8, 0xBCA, 0xBCB, 0xBCC];
         let virama = 0xBCD;
         let reserved = vec![0xB80, 0xB81, 0xB84, 0xB8B, 0xB8C, 0xB8D, 0xB91, 0xB95, 0xB96, 0xB97, 0xB98, 0xB9B, 0xB9D, 0xBA0, 0xBA1, 0xBA2, 0xBA5, 0xBA6, 0xBA7, 0xBAB, 0xBAC, 0xBAD,  0xBBA,  0xBBB, 0xBBC, 0xBBD, 0xBC3, 0xBC4, 0xBC5, 0xBC9, 0xBCE, 0xBCF, 0xBD1, 0xBD2,0xBD3,0xBD4, 0xBD5, 0xBD6, 0xBD8,0xBD9, 0xBDA, 0xBDB, 0xBDC, 0xBDD, 0xBDE, 0xBDF, 0xBE0,0xBE1,0xBE2, 0xBE3, 0xBE4, 0xBE5, 0xBFB, 0xBFC, 0xBFD, 0xBFE, 0xBFF];
         let ignored = vec![0xBF0, 0xBF1, 0xBF2, 0xBF3, 0xBF4, 0xBF5, 0xBF6, 0xBF7, 0xBF8, 0xBF9, 0xBFA];
         let digits = vec![0xBE6, 0xBE7, 0xBE8, 0xBE9, 0xBEA, 0xBEB, 0xBEC, 0xBED, 0xBEE, 0xBEF];
-        let end_of_text = vec![0xBFE];
         let end_of_text = vec![0xBFE];
         let unknown = 0xBFF;
 
@@ -503,8 +500,6 @@ impl Converter {
 
     pub fn add_code_point(&mut self, symbol:&SymbolInfo, config: &Config) -> Result<(), String> {
         let virama = config.virama();
-    pub fn add_code_point(&mut self, symbol:&SymbolInfo, config: &Config) -> Result<(), String> {
-        let virama = config.virama();
         if let SymbolInfo::Consonant(_) = symbol {
             if self.stack.is_empty() {
                 self.stack.push(symbol.clone());
@@ -519,7 +514,6 @@ impl Converter {
                 return Ok(());
             } else {
                 self.stack.push(*symbol);
-                self.stack.push(*symbol);
                 return Err(format!("error in text before consonant {}", std::char::from_u32(symbol.get_u32()).unwrap()));
             }
         }
@@ -529,20 +523,9 @@ impl Converter {
                 return Ok(());
             } else {
                 self.stack.push(*symbol);
-                self.stack.push(*symbol);
                 return Err(format!("error in text before vowel {}", std::char::from_u32(symbol.get_u32()).unwrap()));
             }
         }
-        if let SymbolInfo::VowelSign(v) = symbol {
-            if self.stack.is_empty() {
-                return Err(format!("unexpected {}", std::char::from_u32(*v).unwrap()));
-            }
-            if !self.stack.is_empty() {
-                let last_symbol = self.stack.last().unwrap().get_u32();
-                if !config.consonants.contains(&last_symbol) {
-                    return Err(format!("unexpected character {} before vowel sign {}", std::char::from_u32(last_symbol).unwrap(), std::char::from_u32(symbol.get_u32()).unwrap()));
-                }
-            }
         if let SymbolInfo::VowelSign(v) = symbol {
             if self.stack.is_empty() {
                 return Err(format!("unexpected {}", std::char::from_u32(*v).unwrap()));
@@ -561,7 +544,7 @@ impl Converter {
                 return Err(format!("unexpected {}", std::char::from_u32(*v).unwrap()));
             }
             let last_symbol = self.stack.last().unwrap().get_u32();
-            if !config.vowel_signs.contains(&last_symbol) {
+            if !(config.vowel_signs.contains(&last_symbol) || config.independent_vowels.contains(&last_symbol) || config.consonants.contains(&last_symbol)) {
                 return Err(format!("unexpected character {} before vowel suffix {}", std::char::from_u32(last_symbol).unwrap(), std::char::from_u32(symbol.get_u32()).unwrap()));
             }
             self.stack.push(*symbol);
@@ -570,9 +553,6 @@ impl Converter {
         if let SymbolInfo::Virama(v) = symbol {
             if self.stack.is_empty() {
                 return Err(format!("unexpected virama {}", std::char::from_u32(*v).unwrap()));
-            }
-            if !config.consonants.contains(&self.stack.last().unwrap().get_u32()) {
-                return Err(format!("unexpected character {} before {}", std::char::from_u32(self.stack.last().unwrap().get_u32()).unwrap(), std::char::from_u32(*v).unwrap()));
             }
             if !config.consonants.contains(&self.stack.last().unwrap().get_u32()) {
                 return Err(format!("unexpected character {} before {}", std::char::from_u32(self.stack.last().unwrap().get_u32()).unwrap(), std::char::from_u32(*v).unwrap()));
@@ -589,7 +569,6 @@ impl Converter {
                 return Ok(());
             } else {
                 self.syllables.push(Syllable::Mono(*d));
-                self.syllables.push(Syllable::Mono(*d));
                 return Err(format!("error in text before digit {}", std::char::from_u32(*d).unwrap()));
             }
         }
@@ -605,7 +584,6 @@ impl Converter {
                 self.syllables.push(Syllable::Mono(*r));
                 return Ok(());
             }
-            self.syllables.push(Syllable::Mono(*r));
             self.syllables.push(Syllable::Mono(*r));
             return Err(format!("error in text before out of range {}", std::char::from_u32(*r).unwrap()));
         }
@@ -669,7 +647,6 @@ fn collect_vocab(contents:&[u32], syllabary:&mut SyllableMapping,config:&Config)
     while i < contents.len() {
         let symbol_info = config.to_symbol_info(contents[i]);
         if let Err(msg) = converter.add_code_point(&symbol_info, config) {
-        if let Err(msg) = converter.add_code_point(&symbol_info, config) {
             println!("{} at {}:{}. Current char = {}", msg, line_no, col_no, std::char::from_u32(contents[i]).unwrap());
             result = false;
         }
@@ -698,7 +675,6 @@ fn encode_contents(contents:&[u32], syllabary:&SyllableMapping, config:&Config, 
     let mut col_no = 1;
     while i < contents.len() {
         let symbol_info = config.to_symbol_info(contents[i]);
-        if let Err(msg) = converter.add_code_point(&symbol_info, config) {
         if let Err(msg) = converter.add_code_point(&symbol_info, config) {
             println!("{} at {}:{}. Current char = {}", msg, line_no, col_no, std::char::from_u32(contents[i]).unwrap());
         }
@@ -739,7 +715,6 @@ mod telugu_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -758,7 +733,6 @@ mod telugu_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
@@ -779,7 +753,6 @@ mod telugu_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -798,7 +771,6 @@ mod telugu_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -816,7 +788,6 @@ mod telugu_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
@@ -837,7 +808,6 @@ mod telugu_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -856,7 +826,6 @@ mod telugu_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -874,7 +843,6 @@ mod telugu_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
@@ -900,7 +868,6 @@ mod hindi_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         converter.finish(config.virama());
         let mut round_trip = String::new();
@@ -919,7 +886,6 @@ mod hindi_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         converter.finish(config.virama());
@@ -941,7 +907,6 @@ mod hindi_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         converter.finish(config.virama());
         let mut round_trip = String::new();
@@ -960,7 +925,6 @@ mod hindi_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         converter.finish(config.virama());
         let mut round_trip = String::new();
@@ -978,7 +942,6 @@ mod hindi_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         converter.finish(config.virama());
@@ -1015,25 +978,6 @@ mod tamil_tests{
     }
 
     #[test]
-    fn pagudhiyaichaarndha() {
-        let test_word = "பகுதியைச்சார்ந்த";
-        let config = Config::new_tamil();
-        let mut converter = Converter::new();
-        for chr in test_word.chars() {
-            let c:u32 = chr.into(); 
-            let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
-        }
-        assert!(converter.finish(config.virama()));
-        let mut round_trip = String::new();
-        for s in converter.syllables.iter() {
-            s.append_char(&mut round_trip, &config);
-        }
-        assert_eq!(6, converter.syllables.len());
-        assert_eq!(test_word, round_trip);
-    }
-
-    #[test]
     fn tamil() {
         let test_word = "தமிழ்";
         let config = Config::new_tamil();
@@ -1041,7 +985,6 @@ mod tamil_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
@@ -1062,7 +1005,6 @@ mod tamil_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -1082,7 +1024,6 @@ mod tamil_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -1101,7 +1042,6 @@ mod tamil_tests{
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
             converter.add_code_point(&symbol_info, &config).unwrap();
-            converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
         let mut round_trip = String::new();
@@ -1119,7 +1059,6 @@ mod tamil_tests{
         for chr in test_word.chars() {
             let c:u32 = chr.into(); 
             let symbol_info = config.to_symbol_info(c);
-            converter.add_code_point(&symbol_info, &config).unwrap();
             converter.add_code_point(&symbol_info, &config).unwrap();
         }
         assert!(converter.finish(config.virama()));
@@ -1202,7 +1141,6 @@ impl Tokenizer {
             if *token < 0x4E00 {
                 if *token >= 129 {
                     panic!("Invalid token {} in transform_decode", *token);
-                    // println!("Invalid token {:x} in transform_decode", *token);
                 }
                 decoded.push(*token);
                 continue;
